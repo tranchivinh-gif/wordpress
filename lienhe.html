@@ -1,0 +1,239 @@
+<!-- PASTE TOÀN BỘ ĐOẠN NÀY VÀO WORDPRESS CUSTOM HTML BLOCK -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+.lienhe-page * { box-sizing: border-box; margin: 0; padding: 0; }
+
+.lienhe-page {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #3a4a5c;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.lienhe-hero {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 55%, #2e7d32 100%);
+  padding: 90px 24px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lienhe-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 50%, rgba(76,175,80,0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 50%, rgba(46,125,50,0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.lienhe-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 64px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.lienhe-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.lienhe-hero-eyebrow {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #a5d6a7;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 50px;
+  margin-bottom: 22px;
+}
+
+.lienhe-hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.lienhe-hero p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* ===== CARDS ===== */
+.lienhe-cards-section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 24px 72px;
+}
+
+.lienhe-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.lienhe-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 28px 32px;
+  border: 1.5px solid #c8e6c9;
+  box-shadow: 0 4px 24px rgba(46,125,50,0.07);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  display: flex;
+  flex-direction: column;
+}
+
+.lienhe-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  border-radius: 20px 20px 0 0;
+}
+
+.lienhe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(46,125,50,0.13);
+  border-color: #81c784;
+}
+
+.lienhe-card-icon {
+  width: 54px; height: 54px;
+  border-radius: 14px;
+  background: #e8f5e9;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+
+.lienhe-card-icon img {
+  width: 28px; height: 28px; object-fit: contain;
+}
+
+.lienhe-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 8px;
+}
+
+.lienhe-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.lienhe-card a.lienhe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  width: fit-content;
+  box-shadow: 0 4px 14px rgba(46,125,50,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lienhe-card a.lienhe-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(46,125,50,0.35);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== FOOTER NOTE ===== */
+.lienhe-footer-note {
+  text-align: center;
+  padding: 0 24px 56px;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.7;
+}
+
+.lienhe-footer-note a {
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #a5d6a7;
+  padding-bottom: 1px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lienhe-footer-note a:hover {
+  color: #1b5e20;
+  border-color: #2e7d32;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .lienhe-cards { grid-template-columns: 1fr; }
+  .lienhe-hero { padding: 64px 20px 80px; }
+}
+</style>
+
+<div class="lienhe-page">
+
+  <div class="lienhe-hero">
+    <div class="lienhe-hero-inner">
+      <div class="lienhe-hero-eyebrow">Hỗ trợ &amp; liên hệ</div>
+      <h2>Liên Hệ Với Chúng Tôi</h2>
+      <p>Chúng tôi rất mong nhận được phản hồi từ bạn. Cho dù bạn có câu hỏi, đề xuất hay chỉ muốn chào hỏi — đây là cách bạn có thể liên hệ với chúng tôi.</p>
+    </div>
+  </div>
+
+  <div class="lienhe-cards-section">
+    <div class="lienhe-cards">
+
+      <div class="lienhe-card">
+        <div class="lienhe-card-icon">
+          <img src="https://hoangvu.site/wp-content/uploads/2026/03/@.png" alt="Email">
+        </div>
+        <h4>Email</h4>
+        <p>Send us an email and we'll get back to you.</p>
+        <a href="mailto:giaibaicaptoc@hoangvu.site" class="lienhe-btn">giaibaicaptoc@hoangvu.site →</a>
+      </div>
+
+      <div class="lienhe-card">
+        <div class="lienhe-card-icon">
+          <img src="https://hoangvu.site/wp-content/uploads/2026/03/maillogo.png" alt="Form">
+        </div>
+        <h4>Feedback Form</h4>
+        <p>Điền thông tin bên dưới, chúng tôi sẽ liên hệ lại trong vòng 30 phút.</p>
+        <a href="https://hoangvu.site/share-your-feedback/" class="lienhe-btn">Tới trang điền biểu mẫu →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="lienhe-footer-note">
+    Đối với các thắc mắc liên quan đến quyền riêng tư, vui lòng xem
+    <a href="#">Chính sách bảo mật</a> của chúng tôi.
+  </div>
+
+</div>

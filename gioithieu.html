@@ -1,0 +1,576 @@
+<!-- PASTE TOÀN BỘ ĐOẠN NÀY VÀO WORDPRESS CUSTOM HTML BLOCK -->
+<style>
+/* ===== RESET & BASE ===== */
+.about-page * { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+.about-page {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #3a4a5c;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HERO SECTION ===== */
+.about-hero {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+  padding: 90px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(76,175,80,0.3) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 50%, rgba(46,125,50,0.2) 0%, transparent 60%);
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 60px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.about-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+
+.about-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #a5d6a7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+
+.about-hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 62px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.18;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ===== SECTION WRAPPER ===== */
+.about-section {
+  padding: 72px 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.about-section-title {
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  color: #1a2332;
+  text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.about-section-title .accent { color: #4caf50; }
+
+.about-divider {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  border-radius: 4px;
+  margin: 0 auto 40px;
+}
+
+/* ===== WHO WE ARE ===== */
+.about-who {
+  background: #e8f5e9;
+  padding: 72px 20px;
+}
+
+.about-who-inner { max-width: 1060px; margin: 0 auto; }
+
+.about-who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-who-text p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #3a4a5c;
+  margin-bottom: 16px;
+}
+
+.about-who-text p:last-child { margin-bottom: 0; }
+
+.about-who-visual {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  border-radius: 20px;
+  padding: 40px 32px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-who-visual::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 140px; height: 140px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.about-who-visual::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; left: -30px;
+  width: 100px; height: 100px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+
+.about-who-visual-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.about-who-visual-text {
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  line-height: 1.4;
+}
+
+/* ===== MISSION / VISION ===== */
+.about-mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.about-mv-card {
+  border-radius: 18px;
+  padding: 36px 32px;
+}
+
+.about-mv-card.mission {
+  background: linear-gradient(135deg, #e8f5e9, #f1f8f1);
+  border: 1.5px solid #a5d6a7;
+}
+
+.about-mv-card.vision {
+  background: linear-gradient(135deg, #f1f8f1, #e8f5e9);
+  border: 1.5px solid #c8e6c9;
+}
+
+.about-mv-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+
+.about-mv-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #2e7d32;
+  margin-bottom: 8px;
+}
+
+.about-mv-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 12px;
+}
+
+.about-mv-card p { font-size: 15px; line-height: 1.75; color: #3a4a5c; }
+
+/* ===== VALUES ===== */
+.about-values-bg {
+  background: linear-gradient(180deg, #e8f5e9 0%, #fff 100%);
+  padding: 72px 20px;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.about-value-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px 28px;
+  text-align: center;
+  border: 1.5px solid #c8e6c9;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-value-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  border-radius: 16px 16px 0 0;
+}
+
+.about-value-card:nth-child(1)::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.about-value-card:nth-child(2)::before { background: linear-gradient(90deg, #4caf50, #66bb6a); }
+.about-value-card:nth-child(3)::before { background: linear-gradient(90deg, #2e7d32, #4caf50); }
+.about-value-card:nth-child(4)::before { background: linear-gradient(90deg, #1b5e20, #2e7d32); }
+
+.about-value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(46,125,50,0.13);
+  border-color: #81c784;
+}
+
+.about-value-icon { font-size: 36px; margin-bottom: 14px; display: block; }
+
+.about-value-card h4 { font-size: 16px; font-weight: 700; color: #1a2332; margin-bottom: 10px; }
+.about-value-card p { font-size: 14px; line-height: 1.7; color: #3a4a5c; }
+
+/* ===== STATS ===== */
+.about-stats-section {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+  padding: 72px 20px;
+}
+
+.about-stats-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+
+.about-stats-section .about-section-title { color: #fff; }
+.about-stats-section .about-divider { background: linear-gradient(90deg, #a5d6a7, #66bb6a); }
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.about-stat-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+  padding: 36px 20px;
+  backdrop-filter: blur(8px);
+}
+
+.about-stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.about-stat-number .stat-accent { color: #a5d6a7; }
+.about-stat-label { font-size: 14px; color: rgba(255,255,255,0.7); }
+
+/* ===== AUDIENCE ===== */
+.about-audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.about-audience-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 32px;
+  border: 1.5px solid #c8e6c9;
+  box-shadow: 0 4px 24px rgba(46,125,50,0.07);
+}
+
+.about-audience-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #e8f5e9;
+}
+
+.about-audience-header-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+.about-audience-header h3 { font-size: 17px; font-weight: 700; line-height: 1.3; }
+.about-audience-card:first-child .about-audience-header h3 { color: #1b5e20; }
+.about-audience-card:last-child .about-audience-header h3 { color: #2e7d32; }
+
+.about-audience-list { list-style: none; padding: 0; }
+
+.about-audience-list li {
+  font-size: 15px;
+  color: #3a4a5c;
+  line-height: 1.65;
+  padding: 9px 0 9px 28px;
+  position: relative;
+  border-bottom: 1px solid #e8f5e9;
+}
+
+.about-audience-list li:last-child { border-bottom: none; }
+
+.about-audience-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: 700;
+}
+
+/* ===== CTA ===== */
+.about-cta {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  padding: 90px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.about-cta-inner { position: relative; z-index: 1; }
+
+.about-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.about-cta p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #2e7d32;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 44px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.24);
+  color: #1b5e20;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about-who-grid,
+  .about-mv-grid,
+  .about-audience-grid { grid-template-columns: 1fr; }
+  .about-values-grid { grid-template-columns: 1fr 1fr; }
+  .about-stats-grid { grid-template-columns: 1fr 1fr; }
+  .about-who-visual { display: none; }
+}
+
+@media (max-width: 480px) {
+  .about-values-grid { grid-template-columns: 1fr; }
+  .about-stats-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+
+<div class="about-page">
+
+  <!-- HERO -->
+  <div class="about-hero">
+    <div class="about-hero-inner">
+      <div class="about-hero-badge">Nền tảng gia sư trực tuyến</div>
+      <h2>Về Chúng Tôi</h2>
+      <p>Chúng tôi là nền tảng kết nối học sinh, sinh viên với gia sư chuyên môn — giúp việc học trở nên dễ dàng, linh hoạt và hiệu quả hơn.</p>
+    </div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <div class="about-who">
+    <div class="about-who-inner">
+      <h2 class="about-section-title">Chúng tôi là <span class="accent">ai?</span></h2>
+      <div class="about-divider"></div>
+      <div class="about-who-grid">
+        <div class="about-who-text">
+          <p>Xuất phát từ thực tế nhiều học sinh, sinh viên gặp khó khăn trong việc tìm gia sư phù hợp — tốn thời gian, chi phí cao, thiếu lộ trình rõ ràng — nhóm chúng tôi đã xây dựng nền tảng gia sư online kết hợp giải bài tập theo yêu cầu.</p>
+          <p>Thay vì phải đăng ký học dài hạn tốn kém, người học có thể đăng bài tập cần giải và nhận lời giải chi tiết trong 30–60 phút. Hoặc đặt lịch học 1-1 trực tiếp với gia sư qua Zoom/Google Meet, hoàn toàn linh hoạt về thời gian và địa điểm.</p>
+        </div>
+        <div class="about-who-visual">
+          <span class="about-who-visual-icon">🎓</span>
+          <div class="about-who-visual-text">Học bất cứ lúc nào,<br>bất cứ nơi đâu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION & VISION -->
+  <div class="about-section">
+    <h2 class="about-section-title">Sứ mệnh &amp; <span class="accent">Tầm nhìn</span></h2>
+    <div class="about-divider"></div>
+    <div class="about-mv-grid">
+      <div class="about-mv-card mission">
+        <span class="about-mv-icon">🎯</span>
+        <div class="about-mv-label">Sứ mệnh</div>
+        <h3>Học tập linh hoạt, chi phí hợp lý</h3>
+        <p>Mang đến giải pháp học tập linh hoạt, chi phí hợp lý, giúp mọi học sinh đều có cơ hội tiếp cận gia sư chất lượng bất cứ lúc nào.</p>
+      </div>
+      <div class="about-mv-card vision">
+        <span class="about-mv-icon">🔭</span>
+        <div class="about-mv-label">Tầm nhìn</div>
+        <h3>Nền tảng gia sư online hàng đầu</h3>
+        <p>Trở thành nền tảng gia sư online hàng đầu Việt Nam, nơi việc học và dạy đều trở nên thuận tiện và hiệu quả hơn.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="about-values-bg">
+    <div class="about-section" style="padding-top: 0; padding-bottom: 0;">
+      <h2 class="about-section-title">Giá trị chúng tôi <span class="accent">mang lại</span></h2>
+      <div class="about-divider"></div>
+    </div>
+    <div class="about-values-grid" style="max-width: 1060px; margin: 0 auto; padding: 0 20px 72px;">
+      <div class="about-value-card">
+        <span class="about-value-icon">⚡</span>
+        <h4>Nhanh chóng</h4>
+        <p>Phản hồi và giải bài trong 30–60 phút, hỗ trợ kịp thời trước mọi deadline</p>
+      </div>
+      <div class="about-value-card">
+        <span class="about-value-icon">✅</span>
+        <h4>Chất lượng</h4>
+        <p>Lời giải chi tiết, có hướng dẫn phương pháp, được kiểm duyệt bởi chuyên môn</p>
+      </div>
+      <div class="about-value-card">
+        <span class="about-value-icon">💰</span>
+        <h4>Tiết kiệm</h4>
+        <p>Chỉ trả tiền cho những gì bạn cần, không ép buộc đăng ký gói dài hạn</p>
+      </div>
+      <div class="about-value-card">
+        <span class="about-value-icon">🤝</span>
+        <h4>Tin cậy</h4>
+        <p>Gia sư được xác minh, đánh giá minh bạch từ học viên thực tế</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="about-stats-section">
+    <div class="about-stats-inner">
+      <h2 class="about-section-title">Những gì chúng tôi <span style="color:#a5d6a7">đã đạt được</span></h2>
+      <div class="about-divider"></div>
+      <div class="about-stats-grid">
+        <div class="about-stat-card">
+          <div class="about-stat-number">500<span class="stat-accent">+</span></div>
+          <div class="about-stat-label">Gia sư chuyên môn</div>
+        </div>
+        <div class="about-stat-card">
+          <div class="about-stat-number">1.000<span class="stat-accent">+</span></div>
+          <div class="about-stat-label">Bài tập đã giải</div>
+        </div>
+        <div class="about-stat-card">
+          <div class="about-stat-number" style="font-size:40px;">5</div>
+          <div class="about-stat-label">Môn học hỗ trợ</div>
+        </div>
+        <div class="about-stat-card">
+          <div class="about-stat-number">98<span class="stat-accent">%</span></div>
+          <div class="about-stat-label">Học viên hài lòng</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIENCE -->
+  <div class="about-section">
+    <h2 class="about-section-title">Chúng tôi <span class="accent">phục vụ ai?</span></h2>
+    <div class="about-divider"></div>
+    <div class="about-audience-grid">
+      <div class="about-audience-card">
+        <div class="about-audience-header">
+          <div class="about-audience-header-icon">📚</div>
+          <h3>Nhóm 1 — Người học</h3>
+        </div>
+        <ul class="about-audience-list">
+          <li>Học sinh THCS, THPT cần hỗ trợ giải bài tập ngoài giờ</li>
+          <li>Sinh viên gặp khó khăn với môn cơ sở hoặc chuyên ngành</li>
+          <li>Người cần giải bài gấp trước deadline nộp bài</li>
+          <li>Phụ huynh muốn tìm gia sư uy tín, linh hoạt cho con</li>
+        </ul>
+      </div>
+      <div class="about-audience-card">
+        <div class="about-audience-header">
+          <div class="about-audience-header-icon">🏫</div>
+          <h3>Nhóm 2 — Người dạy</h3>
+        </div>
+        <ul class="about-audience-list">
+          <li>Gia sư online muốn tiếp cận học viên sẵn có</li>
+          <li>Sinh viên giỏi muốn kiếm thêm thu nhập linh hoạt</li>
+          <li>Người có chuyên môn muốn dạy kèm online</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="about-cta">
+    <div class="about-cta-inner">
+      <h2>Sẵn sàng bắt đầu chưa?</h2>
+      <p>Tham gia cùng hàng nghìn học viên đang học hiệu quả hơn mỗi ngày.</p>
+      <a href="#" class="about-cta-btn">Đăng ký ngay</a>
+    </div>
+  </div>
+
+</div>

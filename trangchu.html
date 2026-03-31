@@ -1,0 +1,431 @@
+<!-- PASTE TOÀN BỘ ĐOẠN NÀY VÀO WORDPRESS CUSTOM HTML BLOCK -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+/* ===== BASE ===== */
+.landing-page * { box-sizing: border-box; margin: 0; padding: 0; }
+.landing-page {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #3a4a5c;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.landing-page .container {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+  padding: 90px 24px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page .container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 50%, rgba(76,175,80,0.3) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 50%, rgba(46,125,50,0.2) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.landing-page .container::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 64px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.landing-page .container > * { position: relative; z-index: 1; }
+
+.landing-page .title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 54px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.22;
+  max-width: 780px;
+  margin: 0 auto 24px;
+  letter-spacing: -0.5px;
+}
+
+.landing-page .container .center {
+  font-size: 16px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  max-width: 580px;
+  margin: 0 auto 8px;
+  font-weight: 300;
+}
+
+.landing-page .container .center:last-of-type { margin-bottom: 0; }
+
+.landing-page .btn-group {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.landing-page .btn {
+  display: inline-block;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.2px;
+}
+
+.landing-page .btn-group .btn:first-child {
+  background: #fff;
+  color: #2e7d32;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+
+.landing-page .btn-group .btn:first-child:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+}
+
+.landing-page .btn-group .btn:last-child {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.55);
+}
+
+.landing-page .btn-group .btn:last-child:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.85);
+  transform: translateY(-3px);
+}
+
+/* ===== SECTION TITLE ===== */
+.landing-page .section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3.5vw, 34px);
+  font-weight: 700;
+  color: #1a2332;
+  text-align: center;
+  margin: 72px 0 40px;
+  position: relative;
+  letter-spacing: -0.3px;
+}
+
+.landing-page .section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  border-radius: 4px;
+  margin: 14px auto 0;
+}
+
+/* ===== CARDS ===== */
+.landing-page .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px 72px;
+}
+
+.landing-page .card {
+  border-radius: 20px;
+  padding: 36px 30px 32px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.landing-page .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 48px rgba(46,125,50,0.15);
+}
+
+/* Card color variants */
+.landing-page .card.yellow {
+  background: linear-gradient(160deg, #fffde7 0%, #fff9c4 100%);
+  border: 1.5px solid #f9e04b;
+}
+
+.landing-page .card.gray {
+  background: linear-gradient(160deg, #e8f5e9 0%, #f1f8f1 100%);
+  border: 1.5px solid #a5d6a7;
+}
+
+.landing-page .card.blue {
+  background: linear-gradient(160deg, #e3f2fd 0%, #e8f5fe 100%);
+  border: 1.5px solid #90caf9;
+}
+
+/* Card top accent bar */
+.landing-page .card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  border-radius: 20px 20px 0 0;
+}
+
+.landing-page .card.yellow::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.landing-page .card.gray::before   { background: linear-gradient(90deg, #4caf50, #2e7d32); }
+.landing-page .card.blue::before   { background: linear-gradient(90deg, #1976d2, #42a5f5); }
+
+.landing-page .card h2 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1a2332;
+  line-height: 1.3;
+}
+
+.landing-page .card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #3a4a5c;
+}
+
+.landing-page .card hr {
+  border: none;
+  border-top: 1.5px solid rgba(0,0,0,0.08);
+  margin: 0;
+}
+
+.landing-page .card ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.landing-page .card ul li {
+  font-size: 14px;
+  color: #3a4a5c;
+  line-height: 1.6;
+  padding-left: 22px;
+  position: relative;
+}
+
+.landing-page .card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.landing-page .card.yellow ul li::before { color: #f59e0b; }
+.landing-page .card.gray   ul li::before { color: #4caf50; }
+.landing-page .card.blue   ul li::before { color: #1976d2; }
+
+.landing-page .card .center { text-align: center; margin-top: 4px; }
+
+.landing-page .btn-dark {
+  display: inline-block;
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 16px rgba(46,125,50,0.28);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.landing-page .btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(46,125,50,0.38);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== STATS ===== */
+.landing-page .stats-section {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+  padding: 72px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page .stats-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(76,175,80,0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(46,125,50,0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.landing-page .stats-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.landing-page .stats-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3.5vw, 34px);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+}
+
+.landing-page .stats-section-divider {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, #a5d6a7, #66bb6a);
+  border-radius: 4px;
+  margin: 0 auto 48px;
+}
+
+.landing-page .stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-page .stats > div {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+  padding: 36px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.landing-page .stats .number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.landing-page .stats > div > p:last-child {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 400;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 860px) {
+  .landing-page .cards { grid-template-columns: 1fr; max-width: 480px; }
+  .landing-page .stats { grid-template-columns: 1fr 1fr; }
+  .landing-page .stats-section { padding: 40px 20px; }
+}
+
+@media (max-width: 480px) {
+  .landing-page .stats { grid-template-columns: 1fr 1fr; }
+  .landing-page .container { padding: 64px 20px 80px; }
+}
+</style>
+
+<div class="landing-page">
+  <div class="container">
+    <h2 class="title">Giải Bài Tập Nhanh - Học Kèm Online Linh Hoạt</h2>
+    <p class="center">Nền tảng kết nối học sinh, sinh viên với gia sư chuyên môn.</p>
+    <p class="center">Đăng bài tập - nhận lời giải chi tiết trong 30-60 phút.</p>
+    <p class="center">Học kèm 1-1 qua Zoom/Google Meet, linh hoạt thời gian, chi phí hợp lý.</p>
+    <div class="btn-group">
+      <a href="#" class="btn">Đăng bài</a>
+      <a href="#" class="btn">Tìm gia sư</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">Dịch vụ của chúng tôi</h2>
+
+  <div class="cards">
+    <div class="card yellow">
+      <h2>Giải bài tập</h2>
+      <p><strong>Giải nhanh mọi bài tập theo yêu cầu, có hướng dẫn chi tiết</strong></p>
+      <hr>
+      <ul>
+        <li>Nhận lời giải trong 30-60 phút</li>
+        <li>Hướng dẫn phương pháp, không chỉ đưa đáp án</li>
+        <li>Hỗ trợ Toán, Lý, Hóa, Anh, Tin học</li>
+        <li>Giải bài nhanh khẩn cấp trước deadline</li>
+        <li>Chỉnh sửa lời giải theo phản hồi</li>
+      </ul>
+      <div class="center">
+        <a href="#" class="btn-dark">Từ 30.000đ / bài</a>
+      </div>
+    </div>
+
+    <div class="card gray">
+      <h2>Học 1-1</h2>
+      <p><strong>Học trực tiếp với gia sư qua Zoom/Google Meet, linh hoạt thời gian.</strong></p>
+      <hr>
+      <ul>
+        <li>Buổi học 45 / 60 / 90 phút tùy chọn</li>
+        <li>Gia sư giải thích tận tình từng bước</li>
+        <li>Đặt lịch linh hoạt theo thời gian rảnh</li>
+        <li>Học mọi nơi qua điện thoại/máy tính</li>
+        <li>Ghi lại buổi học để xem lại</li>
+      </ul>
+      <div class="center">
+        <a href="#" class="btn-dark">Từ 80.000đ / buổi</a>
+      </div>
+    </div>
+
+    <div class="card blue">
+      <h2>Kèm theo tháng</h2>
+      <p><strong>Gói học dài hạn có lộ trình rõ ràng, theo dõi tiến độ mỗi tuần.</strong></p>
+      <hr>
+      <ul>
+        <li>Gói 4 / 8 / 12 buổi mỗi tháng</li>
+        <li>Lộ trình học cá nhân hóa theo năng lực</li>
+        <li>Báo cáo tiến độ học tập định kỳ</li>
+        <li>Ưu tiên đặt lịch giờ vàng</li>
+        <li>Tiết kiệm hơn so với đặt lẻ từng buổi</li>
+      </ul>
+      <div class="center">
+        <a href="#" class="btn-dark">Từ 300.000đ / tháng</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-section">
+    <div class="stats-section-inner">
+      <h2 class="stats-section-title">Thống kê nổi bật</h2>
+      <div class="stats-section-divider"></div>
+      <div class="stats">
+        <div>
+          <p class="number">500+</p>
+          <p>Gia sư chuyên môn</p>
+        </div>
+        <div>
+          <p class="number">1000+</p>
+          <p>Bài tập đã giải</p>
+        </div>
+        <div>
+          <p class="number">98%</p>
+          <p>Học viên hài lòng</p>
+        </div>
+        <div>
+          <p class="number">30 phút</p>
+          <p>Thời gian phản hồi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
