@@ -1,0 +1,120 @@
+/* ===== WRAPPER ===== */
+.searchandfilter {
+  max-width: 1060px;
+  margin: 40px auto;
+  padding: 28px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1.5px solid #c8e6c9;
+  box-shadow: 0 8px 30px rgba(46,125,50,0.08);
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* ===== GRID 3 CỘT ===== */
+.searchandfilter ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===== ITEM ===== */
+.searchandfilter li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ===== LABEL ===== */
+.searchandfilter h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+/* ===== SELECT ===== */
+.searchandfilter select {
+  height: 44px;
+  width: 100%;
+  padding: 0 14px;
+
+  border-radius: 12px;
+  border: 1.5px solid #c8e6c9;
+  background: #fff;
+
+  font-size: 14px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+
+  transition: 0.25s;
+  cursor: pointer;
+  appearance: none;
+}
+
+.searchandfilter select:hover {
+  border-color: #81c784;
+}
+
+.searchandfilter select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76,175,80,0.2);
+}
+
+/* ===== BUTTON (tự xuống hàng riêng) ===== */
+.searchandfilter li:last-child {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== SUBMIT ===== */
+.searchandfilter input[type="submit"] {
+  height: 44px;
+  width: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+  border: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: #fff;
+
+  box-shadow: 0 4px 16px rgba(46,125,50,0.25);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.searchandfilter input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(46,125,50,0.35);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .searchandfilter ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .searchandfilter li:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchandfilter ul {
+    grid-template-columns: 1fr;
+  }
+
+  .searchandfilter li:last-child {
+    grid-column: span 1;
+  }
+}

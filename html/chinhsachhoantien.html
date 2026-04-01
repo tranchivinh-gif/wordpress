@@ -1,0 +1,295 @@
+<style>
+/* =========================
+   GLOBAL
+========================= */
+.privacy-policy {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 50px 40px;
+  background: linear-gradient(180deg,#f6faf7,#ffffff);
+  color: #1f2937;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* HEADER */
+.pp-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pp-header h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1b5e20;
+  position: relative;
+}
+
+.pp-header h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 16px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#4caf50,#2e7d32);
+  box-shadow: 0 4px 12px rgba(76,175,80,0.4);
+}
+
+.pp-header p {
+  color: #6b7280;
+}
+
+/* SECTION */
+.pp-section {
+  margin-top: 60px;
+}
+
+.pp-section h2 {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.pp-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#66bb6a,#2e7d32);
+}
+
+/* CARD */
+.pp-card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 16px;
+  border: 1px solid #e5efe7;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.pp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* TABLE */
+.pp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pp-table th {
+  background: linear-gradient(135deg,#2e7d32,#4caf50);
+  color: #fff;
+  padding: 13px;
+  font-size: 14px;
+}
+
+.pp-table td {
+  padding: 13px;
+  border-bottom: 1px solid #eef5ef;
+}
+
+.pp-table tr:hover {
+  background: #f1f8f1;
+}
+
+/* LIST */
+.pp-list {
+  padding-left: 0;
+}
+
+.pp-list li {
+  list-style: none;
+  padding: 8px 0 8px 28px;
+  position: relative;
+}
+
+.pp-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* GRID */
+.pp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CONTACT BOX */
+.pp-contact p {
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="privacy-policy">
+
+  <!-- HEADER -->
+  <div class="pp-header">
+    <h1>Chính sách bảo mật</h1>
+    <p>Cập nhật lần cuối: 01/04/2026</p>
+    <p>Bảo mật – minh bạch – an toàn dữ liệu</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="pp-card">
+    Chúng tôi cam kết bảo vệ thông tin cá nhân của bạn khi sử dụng nền tảng Gia Sư Online.
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="pp-section">
+    <h2>1. Thông tin thu thập</h2>
+
+    <div class="pp-grid">
+      <div class="pp-card">
+        <strong>Đăng ký</strong>
+        <ul class="pp-list">
+          <li>Họ tên</li>
+          <li>Email</li>
+          <li>Mật khẩu (mã hóa)</li>
+          <li>SĐT</li>
+        </ul>
+      </div>
+
+      <div class="pp-card">
+        <strong>Mua hàng</strong>
+        <ul class="pp-list">
+          <li>Thông tin người mua</li>
+          <li>Email xác nhận</li>
+          <li>Lịch sử giao dịch</li>
+          <li>Nội dung bài tập</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pp-card">
+      <strong>Tự động</strong>
+      <ul class="pp-list">
+        <li>IP, trình duyệt</li>
+        <li>Thiết bị</li>
+        <li>Trang truy cập</li>
+        <li>Thời gian truy cập</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="pp-section">
+    <h2>2. Mục đích sử dụng</h2>
+
+    <div class="pp-card">
+      <table class="pp-table">
+        <tr><th>Mục đích</th><th>Chi tiết</th></tr>
+        <tr><td>Xử lý đơn</td><td>Xác nhận dịch vụ</td></tr>
+        <tr><td>Thông báo</td><td>Email trạng thái</td></tr>
+        <tr><td>Hỗ trợ</td><td>CSKH</td></tr>
+        <tr><td>Cải thiện</td><td>Phân tích hành vi</td></tr>
+        <tr><td>Marketing</td><td>Ưu đãi (nếu đồng ý)</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="pp-section">
+    <h2>3. Chia sẻ thông tin</h2>
+
+    <div class="pp-card">
+      <ul class="pp-list">
+        <li>Không bán dữ liệu</li>
+        <li>Chỉ chia sẻ cho gia sư (ẩn info)</li>
+        <li>Cổng thanh toán</li>
+        <li>Yêu cầu pháp lý</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="pp-section">
+    <h2>4. Bảo mật</h2>
+
+    <div class="pp-card">
+      <ul class="pp-list">
+        <li>Bcrypt password</li>
+        <li>HTTPS</li>
+        <li>Backup dữ liệu</li>
+        <li>Phân quyền truy cập</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="pp-section">
+    <h2>5. Quyền người dùng</h2>
+
+    <div class="pp-card">
+      <table class="pp-table">
+        <tr><th>Quyền</th><th>Cách</th></tr>
+        <tr><td>Xem</td><td>My Account</td></tr>
+        <tr><td>Sửa</td><td>Profile</td></tr>
+        <tr><td>Xóa</td><td>Liên hệ</td></tr>
+        <tr><td>Hủy mail</td><td>Unsubscribe</td></tr>
+        <tr><td>Xuất data</td><td>Email</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="pp-section">
+    <h2>6. Cookie</h2>
+
+    <div class="pp-card">
+      <ul class="pp-list">
+        <li>Giữ login</li>
+        <li>Lưu giỏ hàng</li>
+        <li>Analytics</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="pp-section">
+    <h2>7. Thay đổi</h2>
+
+    <div class="pp-card">
+      Chính sách có thể thay đổi và sẽ được thông báo.
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="pp-section">
+    <h2>8. Liên hệ</h2>
+
+    <div class="pp-card pp-contact">
+      <p>Email: hotro@hoangvu.site</p>
+      <p>Zalo: 0xxx xxx xxx</p>
+      <p>Website: hoangvu.site/lien-he</p>
+    </div>
+  </div>
+
+</div>

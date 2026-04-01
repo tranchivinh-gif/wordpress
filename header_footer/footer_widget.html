@@ -1,0 +1,494 @@
+<div class="footer-grid">
+<style>
+  /* ================================================================
+   HEADER & FOOTER CSS — Paste vào Appearance > Customize > Additional CSS
+   Hoặc dùng plugin "Simple Custom CSS"
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+/* ================================================================
+   GLOBAL FONT
+   ================================================================ */
+body,
+.ast-header-account-link,
+.menu-link,
+.ast-custom-button,
+.footer-grid,
+.footer-bottom {
+  font-family: 'Be Vietnam Pro', sans-serif !important;
+}
+
+/* ================================================================
+   ABOVE HEADER (thanh trên cùng)
+   ================================================================ */
+.ast-above-header-bar {
+  background: #1b5e20 !important;
+  border-bottom: none !important;
+  padding: 6px 0 !important;
+  min-height: unset !important;
+}
+
+/* ================================================================
+   PRIMARY HEADER (thanh nav chính)
+   ================================================================ */
+.main-header-bar,
+.ast-primary-header-bar {
+  background: #fff !important;
+  border-bottom: 2px solid #e8f5e9 !important;
+  box-shadow: 0 2px 16px rgba(46, 125, 50, 0.08) !important;
+  padding: 0 !important;
+}
+
+/* ================================================================
+   LOGO / SITE TITLE
+   ================================================================ */
+.site-title a,
+.site-title a:visited {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #1b5e20 !important;
+  text-decoration: none !important;
+  letter-spacing: -0.3px !important;
+}
+
+.site-title a:hover {
+  color: #4caf50 !important;
+}
+
+/* ================================================================
+   NAV MENU ITEMS
+   ================================================================ */
+#ast-hf-menu-1 > li > a.menu-link,
+.main-header-menu > li > a.menu-link {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1a2332 !important;
+  padding: 28px 14px !important;
+  letter-spacing: 0.1px !important;
+  transition: color 0.2s !important;
+  position: relative !important;
+}
+
+/* underline hover effect */
+#ast-hf-menu-1 > li > a.menu-link::after,
+.main-header-menu > li > a.menu-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 16px !important;
+  left: 14px !important;
+  right: 14px !important;
+  height: 2px !important;
+  background: #4caf50 !important;
+  border-radius: 2px !important;
+  transform: scaleX(0) !important;
+  transition: transform 0.22s ease !important;
+}
+
+#ast-hf-menu-1 > li > a.menu-link:hover,
+.main-header-menu > li > a.menu-link:hover,
+#ast-hf-menu-1 > li.current-menu-item > a.menu-link,
+.main-header-menu > li.current-menu-item > a.menu-link {
+  color: #2e7d32 !important;
+}
+
+#ast-hf-menu-1 > li > a.menu-link:hover::after,
+.main-header-menu > li > a.menu-link:hover::after,
+#ast-hf-menu-1 > li.current-menu-item > a.menu-link::after,
+.main-header-menu > li.current-menu-item > a.menu-link::after {
+  transform: scaleX(1) !important;
+}
+
+/* ================================================================
+   DROPDOWN SUBMENU
+   ================================================================ */
+.main-header-menu .sub-menu {
+  background: #fff !important;
+  border: 1.5px solid #e8f5e9 !important;
+  border-top: 3px solid #4caf50 !important;
+  border-radius: 0 0 12px 12px !important;
+  box-shadow: 0 8px 32px rgba(46, 125, 50, 0.12) !important;
+  padding: 8px 0 !important;
+  min-width: 200px !important;
+}
+
+.main-header-menu .sub-menu li a.menu-link {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #3a4a5c !important;
+  padding: 10px 20px !important;
+  display: block !important;
+  transition: background 0.15s, color 0.15s !important;
+}
+
+.main-header-menu .sub-menu li a.menu-link:hover {
+  background: #e8f5e9 !important;
+  color: #2e7d32 !important;
+}
+
+/* ================================================================
+   HEADER BUTTON "Đăng ký / Đăng nhập"
+   ================================================================ */
+.ast-custom-button {
+  background: linear-gradient(135deg, #2e7d32, #4caf50) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important;
+  border-radius: 50px !important;
+  letter-spacing: 0.2px !important;
+  transition: box-shadow 0.2s, transform 0.2s !important;
+  box-shadow: 0 4px 14px rgba(46, 125, 50, 0.28) !important;
+  border: none !important;
+}
+
+.ast-custom-button:hover {
+  box-shadow: 0 8px 22px rgba(46, 125, 50, 0.38) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ================================================================
+   ACCOUNT ICON & CART ICON
+   ================================================================ */
+.ast-header-account-link svg,
+.astra-icon svg {
+  fill: #2e7d32 !important;
+  width: 22px !important;
+  height: 22px !important;
+}
+
+.ast-addon-cart-wrap {
+  border: 1.5px solid #c8e6c9 !important;
+  border-radius: 50px !important;
+  padding: 6px 10px !important;
+  transition: background 0.2s !important;
+}
+
+.ast-addon-cart-wrap:hover {
+  background: #e8f5e9 !important;
+}
+
+/* Search icon */
+.astra-search-icon svg,
+.ast-search-submit svg {
+  fill: #2e7d32 !important;
+}
+
+/* ================================================================
+   MOBILE HEADER
+   ================================================================ */
+#ast-mobile-header .main-header-bar {
+  background: #fff !important;
+  border-bottom: 2px solid #e8f5e9 !important;
+}
+
+#ast-mobile-header .site-title a {
+  font-family: 'Playfair Display', serif !important;
+  color: #1b5e20 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+/* Hamburger button */
+.menu-toggle,
+.ast-mobile-menu-trigger-minimal {
+  color: #2e7d32 !important;
+}
+
+.menu-toggle svg {
+  fill: #2e7d32 !important;
+}
+
+/* Mobile menu */
+#ast-mobile-site-navigation .main-navigation {
+  background: #fff !important;
+  border-top: 2px solid #e8f5e9 !important;
+}
+
+#ast-hf-mobile-menu li a.menu-link {
+  color: #1a2332 !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  padding: 12px 20px !important;
+  border-bottom: 1px solid #f1f8f1 !important;
+}
+
+#ast-hf-mobile-menu li a.menu-link:hover,
+#ast-hf-mobile-menu li.current-menu-item a.menu-link {
+  color: #2e7d32 !important;
+  background: #e8f5e9 !important;
+}
+
+/* ================================================================
+   FOOTER GRID
+   ================================================================ */
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr !important;
+  gap: 48px !important;
+  background: #0d2b12 !important;
+  padding: 72px 60px 56px !important;
+  position: relative !important;
+}
+
+.footer-grid::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background:
+    radial-gradient(ellipse at 10% 50%, rgba(76,175,80,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 50%, rgba(46,125,50,0.08) 0%, transparent 50%) !important;
+  pointer-events: none !important;
+}
+
+.footer-col {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ================================================================
+   FOOTER LOGO & DESC
+   ================================================================ */
+.footer-logo {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin-bottom: 14px !important;
+  letter-spacing: -0.3px !important;
+}
+
+.footer-desc {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: 1.8 !important;
+  margin-bottom: 24px !important;
+  max-width: 280px !important;
+}
+
+/* ================================================================
+   FOOTER SOCIAL LINKS
+   ================================================================ */
+.footer-social {
+  display: flex !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+}
+
+.footer-social a {
+  display: inline-block !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 7px 16px !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  transition: background 0.2s, border-color 0.2s, color 0.2s !important;
+}
+
+.footer-social a:hover {
+  background: rgba(76, 175, 80, 0.25) !important;
+  border-color: #4caf50 !important;
+  color: #a5d6a7 !important;
+}
+
+/* ================================================================
+   FOOTER HEADINGS
+   ================================================================ */
+.footer-heading {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: #4caf50 !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid rgba(76, 175, 80, 0.25) !important;
+}
+
+/* ================================================================
+   FOOTER LINKS
+   ================================================================ */
+.footer-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.footer-links li a {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  text-decoration: none !important;
+  padding: 6px 0 !important;
+  display: inline-block !important;
+  transition: color 0.2s, padding-left 0.2s !important;
+  position: relative !important;
+}
+
+.footer-links li a:hover {
+  color: #a5d6a7 !important;
+  padding-left: 8px !important;
+}
+
+/* ================================================================
+   FOOTER CONTACT LIST
+   ================================================================ */
+.footer-contact-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+}
+
+.footer-contact-list li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+}
+
+.contact-icon {
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+}
+
+.footer-contact-list li span:last-child {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.72) !important;
+  line-height: 1.55 !important;
+}
+
+/* ================================================================
+   FOOTER BOTTOM BAR
+   ================================================================ */
+.footer-bottom {
+  background: #071a09 !important;
+  padding: 18px 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  border-top: 1px solid rgba(76, 175, 80, 0.2) !important;
+}
+
+.footer-bottom p {
+  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.footer-bottom p:first-child {
+  color: rgba(255, 255, 255, 0.65) !important;
+  font-weight: 500 !important;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 56px 40px 48px !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    padding: 48px 24px 40px !important;
+    gap: 36px !important;
+  }
+
+  .footer-bottom {
+    padding: 16px 24px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  #ast-hf-menu-1 > li > a.menu-link {
+    padding: 20px 10px !important;
+    font-size: 13px !important;
+  }
+}
+
+</style>
+  <!-- Cột 1: Giới thiệu -->
+  <div class="footer-col footer-col-brand">
+    <h3 class="footer-logo">Gia Sư Online</h3>
+    <p class="footer-desc">
+      Nền tảng kết nối học sinh, sinh viên với gia sư chuyên môn. 
+      Giải bài tập nhanh, học kèm 1-1 linh hoạt, chi phí hợp lý.
+    </p>
+    <div class="footer-social">
+      <a href="#">Facebook</a>
+      <a href="#">Zalo</a>
+      <a href="#">YouTube</a>
+    </div>
+  </div>
+
+  <!-- Cột 2: Dịch vụ -->
+  <div class="footer-col footer-col-services">
+    <h4 class="footer-heading">Dịch vụ</h4>
+    <ul class="footer-links">
+      <li><a href="/dang-bai-tap">Giải bài tập</a></li>
+      <li><a href="/tim-gia-su">Học kèm 1-1</a></li>
+      <li><a href="/bang-gia">Kèm theo tháng</a></li>
+      <li><a href="/tim-gia-su">Tìm gia sư</a></li>
+      <li><a href="/bang-gia">Bảng giá</a></li>
+      <li><a href="/shop">Cửa hàng</a></li>
+    </ul>
+  </div>
+
+  <!-- Cột 3: Hỗ trợ -->
+  <div class="footer-col footer-col-support">
+    <h4 class="footer-heading">Hỗ trợ</h4>
+    <ul class="footer-links">
+      <li><a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a></li>
+      <li><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
+      <li><a href="/chinh-sach-hoan-tien">Chính sách hoàn tiền</a></li>
+      <li><a href="/lien-he">Câu hỏi thường gặp</a></li>
+      <li><a href="/lien-he">Liên hệ</a></li>
+    </ul>
+  </div>
+
+  <!-- Cột 4: Liên hệ -->
+  <div class="footer-col footer-col-contact">
+    <h4 class="footer-heading">Liên hệ</h4>
+    <ul class="footer-contact-list">
+      <li>
+        <span class="contact-icon">📞</span>
+        <span>0xxx xxx xxx</span>
+      </li>
+      <li>
+        <span class="contact-icon">💬</span>
+        <span>Zalo: 0xxx xxx xxx</span>
+      </li>
+      <li>
+        <span class="contact-icon">📧</span>
+        <span>hotro@hoangvu.site</span>
+      </li>
+      <li>
+        <span class="contact-icon">🕐</span>
+        <span>8:00 - 22:00 hàng ngày</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Copyright -->
+<div class="footer-bottom">
+  <p>© 2026 Gia Sư Online - Nhóm 4 | hoangvu.site</p>
+  <p>Bài Tập Lớn Môn Thương Mại Điện Tử - Nhóm TH: Cô Tuyết</p>
+</div>

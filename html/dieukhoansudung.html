@@ -1,0 +1,326 @@
+<style>
+/* =========================
+   GLOBAL
+========================= */
+.terms-policy {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 50px 40px;
+  background: linear-gradient(180deg,#f6faf7,#ffffff);
+  color: #1f2937;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(20px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+/* HEADER */
+.tp-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tp-header h1 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1b5e20;
+  position: relative;
+}
+
+.tp-header h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 16px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#4caf50,#2e7d32);
+  box-shadow: 0 4px 12px rgba(76,175,80,0.4);
+}
+
+.tp-header p {
+  color: #6b7280;
+}
+
+/* SECTION */
+.tp-section {
+  margin-top: 60px;
+}
+
+.tp-section h2 {
+  font-size: 24px;
+  font-weight: 800;
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.tp-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#66bb6a,#2e7d32);
+}
+
+/* CARD */
+.tp-card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 16px;
+  border: 1px solid #e5efe7;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.tp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+}
+
+/* LIST */
+.tp-list {
+  padding-left: 0;
+}
+
+.tp-list li {
+  list-style: none;
+  padding: 8px 0 8px 28px;
+  position: relative;
+}
+
+.tp-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* WARNING LIST */
+.tp-warning li::before {
+  content: "⚠";
+  color: #f59e0b;
+}
+
+/* TABLE */
+.tp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tp-table th {
+  background: linear-gradient(135deg,#2e7d32,#4caf50);
+  color: #fff;
+  padding: 13px;
+}
+
+.tp-table td {
+  padding: 13px;
+  border-bottom: 1px solid #eef5ef;
+}
+
+.tp-table tr:hover {
+  background: #f1f8f1;
+}
+
+.ok { color: #2e7d32; font-weight: 600; }
+.no { color: #e53935; font-weight: 600; }
+
+/* GRID */
+.tp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .tp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="terms-policy">
+
+  <!-- HEADER -->
+  <div class="tp-header">
+    <h1>Điều khoản sử dụng</h1>
+    <p>Cập nhật lần cuối: 01/04/2026</p>
+    <p>Minh bạch – công bằng – bảo vệ hệ thống</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="tp-card">
+    Khi sử dụng hoangvu.site, bạn đồng ý với các điều khoản dưới đây.
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="tp-section">
+    <h2>1. Tài khoản</h2>
+
+    <div class="tp-grid">
+      <div class="tp-card">
+        <strong>Đăng ký</strong>
+        <ul class="tp-list">
+          <li>Thông tin chính xác</li>
+          <li>Mỗi người 1 tài khoản</li>
+          <li>Đủ 15 tuổi hoặc có phụ huynh</li>
+          <li>Email hợp lệ</li>
+        </ul>
+      </div>
+
+      <div class="tp-card">
+        <strong>Bảo mật</strong>
+        <ul class="tp-list">
+          <li>Tự bảo mật mật khẩu</li>
+          <li>Không chia sẻ tài khoản</li>
+          <li>Báo ngay khi bị hack</li>
+          <li>Không chịu trách nhiệm nếu lộ do bạn</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tp-card">
+      <strong>Khóa tài khoản khi:</strong>
+      <ul class="tp-warning tp-list">
+        <li>Thông tin sai</li>
+        <li>Vi phạm điều khoản</li>
+        <li>Gian lận</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="tp-section">
+    <h2>2. Mua hàng</h2>
+
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Xác nhận sau thanh toán</li>
+        <li>Email trong 15 phút</li>
+        <li>Kiểm tra kỹ trước khi mua</li>
+      </ul>
+    </div>
+
+    <div class="tp-card">
+      <strong>Thanh toán</strong>
+      <ul class="tp-list">
+        <li>Ngân hàng, MoMo</li>
+        <li>Không phí ẩn</li>
+      </ul>
+    </div>
+
+    <div class="tp-card">
+      <strong>Thực hiện</strong>
+      <ul class="tp-list">
+        <li>Gửi bài sau thanh toán</li>
+        <li>Xử lý trong 30 phút</li>
+        <li>Hoàn thành 30–60 phút</li>
+      </ul>
+    </div>
+
+    <div class="tp-card">
+      <table class="tp-table">
+        <tr><th>Trường hợp</th><th>Kết quả</th></tr>
+        <tr><td>Hủy trước nhận bài</td><td class="ok">Hoàn 100%</td></tr>
+        <tr><td>Sai yêu cầu</td><td class="ok">Hoàn 100%</td></tr>
+        <tr><td>Đã nhận bài</td><td class="no">Không hoàn</td></tr>
+        <tr><td>Hủy trước 24h</td><td class="ok">Hoàn 100%</td></tr>
+        <tr><td>Hủy <24h</td><td class="no">Không hoàn</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="tp-section">
+    <h2>3. Quy định sử dụng</h2>
+
+    <div class="tp-grid">
+      <div class="tp-card">
+        <strong>Người học</strong>
+        <ul class="tp-warning tp-list">
+          <li>Không gian lận thi</li>
+          <li>Không bán lại bài</li>
+          <li>Không dùng sai mục đích</li>
+          <li>Không xúc phạm gia sư</li>
+        </ul>
+      </div>
+
+      <div class="tp-card">
+        <strong>Gia sư</strong>
+        <ul class="tp-warning tp-list">
+          <li>Không giải sai</li>
+          <li>Không liên hệ riêng</li>
+          <li>Không lộ info</li>
+          <li>Không hủy đơn vô lý</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="tp-section">
+    <h2>4. Sở hữu</h2>
+
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Website thuộc hoangvu.site</li>
+        <li>Lời giải chỉ cho người mua</li>
+        <li>Cấm sao chép, phân phối</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="tp-section">
+    <h2>5. Trách nhiệm</h2>
+
+    <div class="tp-card">
+      <ul class="tp-warning tp-list">
+        <li>Không đảm bảo kết quả học</li>
+        <li>Lỗi kỹ thuật ngoài kiểm soát</li>
+        <li>Sự cố bất khả kháng</li>
+        <li>Hành vi ngoài nền tảng</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="tp-section">
+    <h2>6. Thay đổi</h2>
+
+    <div class="tp-card">
+      Điều khoản có thể thay đổi bất cứ lúc nào.
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="tp-section">
+    <h2>7. Luật</h2>
+
+    <div class="tp-card">
+      Áp dụng pháp luật Việt Nam.
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="tp-section">
+    <h2>8. Liên hệ</h2>
+
+    <div class="tp-card">
+      <p>Email: hotro@hoangvu.site</p>
+      <p>Zalo: 0xxx xxx xxx</p>
+      <p>Website: hoangvu.site/lien-he</p>
+    </div>
+  </div>
+
+</div>
