@@ -1,0 +1,213 @@
+<style>
+        /* chinh trang gia su */
+    /* ===== FIX SCOPE ===== */
+    .gia-su-page * {
+    box-sizing: border-box;
+    }
+
+    /* ===== BASE ===== */
+    .gia-su-page {
+    font-family: 'Be Vietnam Pro', sans-serif !important;
+    color: #3a4a5c;
+    max-width: 1060px;
+    margin: auto;
+    padding: 40px 20px;
+    }
+
+    /* ===== TITLE ===== */
+    .gia-su-page h2 {
+    font-family: 'Playfair Display', serif !important;
+    font-size: clamp(28px, 4vw, 42px);
+    text-align: center;
+    color: #1a2332;
+    margin-bottom: 30px;
+    }
+
+    /* ===== BLOCKQUOTE ===== */
+    .gia-su-page blockquote {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8f1);
+    border: 1.5px solid #c8e6c9;
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 30px;
+    }
+
+    /* ===== GRID FIX ===== */
+    .gia-su-page .row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    }
+
+    .gia-su-page .col {
+    flex: 1;
+    min-width: 280px;
+    }
+
+    /* ===== LIST FIX ===== */
+    .gia-su-page ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0;
+    }
+
+    .gia-su-page ul li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px solid #e8f5e9;
+    }
+
+    .gia-su-page ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+    }
+
+    /* ===== TABLE FIX ===== */
+    .gia-su-page table {
+    width: 100% !important;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+
+    .gia-su-page th {
+    background: linear-gradient(135deg, #2e7d32, #4caf50);
+    color: #fff;
+    padding: 12px;
+    }
+
+    .gia-su-page td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e8f5e9;
+    }
+
+    /* ===== BUTTON ===== */
+    .gia-su-page .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #2e7d32, #4caf50);
+    color: #fff !important;
+    padding: 12px 26px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    }
+
+    /* ===== IMAGE ===== */
+    .gia-su-page img {
+    border-radius: 16px;
+    max-width: 100%;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+    .gia-su-page .row {
+        flex-direction: column;
+    }
+    }
+    /* chinh trang gia su */
+
+</style>
+
+<div class="gia-su-page">
+
+    <h2 style="color: #2e7d32;"><code>Tìm Gia Sư - Học 1-1 Online Linh Hoạt</code></h2>
+
+    <blockquote>
+        <div class="row">
+            <div class="col">
+                <p><strong>👉 Mô tả:</strong></p>
+                <p>Học trực tiếp với gia sư qua Zoom hoặc Google Meet. Chọn đúng người, đúng môn, đúng giờ — hoàn toàn linh hoạt theo lịch của bạn.</p>
+            </div>
+
+            <div class="col">
+                <p><strong>👉 Tại sao chọn học 1-1?</strong></p>
+                <ul>
+                    <li>✅ Học qua Zoom / Google Meet tiện lợi</li>
+                    <li>✅ Chọn buổi học 45 / 60 / 90 phút</li>
+                    <li>✅ Đặt lịch linh hoạt theo thời gian rảnh</li>
+                    <li>✅ Gia sư tập trung vào điểm yếu của riêng bạn</li>
+                    <li>✅ Giảng lại bài tập đã giải nếu chưa hiểu</li>
+                    <li>✅ Ghi lại buổi học để xem lại sau</li>
+                </ul>
+            </div>
+        </div>
+    </blockquote>
+
+    <p><strong>👉 Các gói học 1-1:</strong></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Gói</th>
+                <th>Thời lượng</th>
+                <th>Giá</th>
+                <th>Phù hợp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Buổi ngắn</td>
+                <td>45 phút</td>
+                <td>Từ 80.000đ</td>
+                <td>Giải đáp 1 vấn đề cụ thể</td>
+            </tr>
+            <tr>
+                <td>Buổi tiêu chuẩn</td>
+                <td>60 phút</td>
+                <td>Từ 100.000đ</td>
+                <td>Ôn tập 1 chủ đề</td>
+            </tr>
+            <tr>
+                <td>Buổi chuyên sâu</td>
+                <td>90 phút</td>
+                <td>Từ 140.000đ</td>
+                <td>Học kỹ, hỏi nhiều</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>👉 Quy trình đặt lịch:</strong></p>
+
+    <table>
+        <tr>
+            <td>Bước 1</td>
+            <td>Bước 2</td>
+            <td>Bước 3</td>
+            <td>Bước 4</td>
+        </tr>
+        <tr>
+            <td>📚 Chọn môn & cấp học</td>
+            <td>👨‍🏫 Chọn gia sư phù hợp</td>
+            <td>💳 Thanh toán online</td>
+            <td>💻 Học đúng giờ qua Zoom/Meet</td>
+        </tr>
+    </table>
+
+    <p><strong>👉 Gia sư của chúng tôi là ai?</strong></p>
+
+    <blockquote>
+        <p>Tất cả gia sư trên nền tảng đều được kiểm duyệt kỹ càng trước khi tiếp nhận học viên:</p>
+    </blockquote>
+
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li>🎓 Sinh viên giỏi các trường Đại học uy tín</li>
+                <li>👨‍🏫 Giáo viên, giảng viên có kinh nghiệm giảng dạy</li>
+                <li>📊 Người có chuyên môn và kinh nghiệm thực tế</li>
+                <li>⭐ Được đánh giá minh bạch từ học viên thực tế</li>
+            </ul>
+
+            <a href="#" class="btn-primary">Tìm gia sư ngay</a>
+        </div>
+
+        <div class="col">
+            <img src="https://hoangvu.site/wp-content/uploads/2026/03/a11.jpg" alt="" style="max-width:100%;">
+        </div>
+    </div>
+
+</div>
