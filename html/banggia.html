@@ -1,398 +1,484 @@
+<!-- PASTE TOÀN BỘ ĐOẠN NÀY VÀO WORDPRESS CUSTOM HTML BLOCK -->
 <style>
-/* ===== GLOBAL SCOPE ===== */
-.gia-su-page * {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+/* ===== RESET & BASE ===== */
+.gsp * { box-sizing: border-box; margin: 0; padding: 0; }
+
+.gsp {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #3a4a5c;
+  background: #fff;
+  overflow-x: hidden;
 }
 
-/* ===== CONTAINER ===== */
-.gia-su-page {
-    font-family: 'Be Vietnam Pro', sans-serif !important;
-    color: #3a4a5c;
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+/* ===== HOVER ANIMATION ===== */
+.gsp .gsp-faq-item,
+.gsp .gsp-benefits li {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.gsp .gsp-faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(46,125,50,0.1);
 }
 
-/* ===== HEADER ===== */
-.gia-su-page .section-header {
-    text-align: center;
-    margin-bottom: 30px;
+/* ===== HERO ===== */
+.gsp-hero {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+  padding: 90px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.gsp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(76,175,80,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 50%, rgba(46,125,50,0.2) 0%, transparent 60%);
+}
+.gsp-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 60px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.gsp-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.gsp-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #a5d6a7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+.gsp-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 62px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.18;
+  margin-bottom: 16px;
+}
+.gsp-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 300;
 }
 
-.gia-su-page h2 {
-    font-family: 'Playfair Display', serif !important;
-    font-size: clamp(28px, 4vw, 42px);
-    color: #1a2332;
-    margin-bottom: 10px;
+/* ===== SECTION WRAPPER ===== */
+.gsp-section {
+  padding: 72px 20px;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
-.gia-su-page .subtitle {
-    color: #607d8b;
-    margin-bottom: 20px;
+.gsp-section-title {
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  color: #1a2332;
+  text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+.gsp-section-title .accent { color: #4caf50; }
+
+.gsp-divider {
+  width: 48px; height: 4px;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  border-radius: 4px;
+  margin: 0 auto 40px;
 }
 
-/* ===== SECTION ===== */
-.gia-su-page .section {
-    margin-bottom: 45px;
+/* ===== BG ALTERNATING ===== */
+.gsp-bg-green {
+  background: #e8f5e9;
+  padding: 72px 20px;
 }
-
-.gia-su-page .section h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #1b5e20;
+.gsp-bg-green .gsp-section {
+  padding: 0;
 }
 
 /* ===== BOX ===== */
-.gia-su-page .box {
-    background: linear-gradient(135deg, #e8f5e9, #f9fff9);
-    border: 1px solid #c8e6c9;
-    border-radius: 16px;
-    padding: 20px;
+.gsp-box {
+  background: linear-gradient(135deg, #e8f5e9, #f9fff9);
+  border: 1px solid #c8e6c9;
+  border-radius: 16px;
+  padding: 24px 28px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #3a4a5c;
 }
 
 /* ===== BENEFITS ===== */
-.gia-su-page .benefits {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 12px;
-    padding: 0;
-    list-style: none;
+.gsp-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+  list-style: none;
 }
-
-.gia-su-page .benefits li {
-    background: #f1f8f1;
-    border-radius: 12px;
-    padding: 12px 12px 12px 32px;
-    position: relative;
-    border: 1px solid #e0f2e9;
+.gsp-benefits li {
+  background: #f1f8f1;
+  border-radius: 12px;
+  padding: 13px 13px 13px 34px;
+  position: relative;
+  border: 1px solid #e0f2e9;
+  font-size: 15px;
+  line-height: 1.6;
 }
-
-.gia-su-page .benefits li::before {
-    content: "✔";
-    position: absolute;
-    left: 10px;
-    color: #4caf50;
-    font-weight: bold;
+.gsp-benefits li::before {
+  content: "✔";
+  position: absolute;
+  left: 11px;
+  color: #4caf50;
+  font-weight: bold;
 }
 
 /* ===== TABLE ===== */
-.gia-su-page table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+.gsp table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
-
-/* ===== TABLE HEADER ===== */
-.gia-su-page th {
-    background: linear-gradient(135deg, #2e7d32, #4caf50);
-    color: #fff;
-    padding: 14px;
-    font-weight: 600;
+.gsp th {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: #fff;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Be Vietnam Pro', sans-serif;
 }
-
-/* ===== TABLE CELL ===== */
-.gia-su-page td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #e8f5e9;
+.gsp td {
+  padding: 13px 16px;
+  text-align: center;
+  border-bottom: 1px solid #e8f5e9;
+  font-size: 15px;
 }
 
 /* ===== PRICING TABLE ===== */
-.gia-su-page .pricing-table tr {
-    transition: 0.25s;
+.gsp .pricing-table tr { transition: background 0.2s; }
+.gsp .pricing-table tr:hover { background: #f9fff9; }
+.gsp .pricing-table .plan { font-weight: 700; color: #2e7d32; }
+.gsp .pricing-table .highlight {
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  border-left: 3px solid #4caf50;
+  border-right: 3px solid #4caf50;
+  font-weight: 600;
 }
-
-.gia-su-page .pricing-table tr:hover {
-    background: #f9fff9;
-}
-
-.gia-su-page .pricing-table .plan {
-    font-weight: bold;
-    color: #2e7d32;
-}
-
-/* ===== HIGHLIGHT PLAN ===== */
-.gia-su-page .pricing-table .highlight {
-    background: linear-gradient(135deg, #e8f5e9, #ffffff);
-    transform: scale(1.03);
-    border: 2px solid #4caf50;
-    font-weight: bold;
-}
+.gsp .pricing-table .highlight .plan { color: #1b5e20; }
 
 /* ===== TARGET TABLE ===== */
-.gia-su-page .target-table td {
-    text-align: left;
-}
-
-.gia-su-page .target-table tr td:first-child {
-    font-weight: 500;
-}
+.gsp .target-table td { text-align: left; }
+.gsp .target-table tr td:first-child { font-weight: 500; }
 
 /* ===== COMPARE TABLE ===== */
-.gia-su-page .compare-table td {
-    font-size: 14px;
-}
+.gsp .compare-table td { font-size: 14px; }
 
 /* ===== FAQ ===== */
-.gia-su-page .faq-item {
-    background: #f9fff9;
-    border: 1px solid #e0f2e9;
-    border-radius: 12px;
-    padding: 15px 18px;
-    margin-bottom: 12px;
-    transition: 0.3s;
+.gsp-faq-item {
+  background: #f9fff9;
+  border: 1px solid #e0f2e9;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
 }
-
-.gia-su-page .faq-item:hover {
-    transform: translateY(-2px);
+.gsp-faq-item .question {
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 6px;
+  font-size: 15px;
 }
-
-.gia-su-page .faq-item .question {
-    font-weight: bold;
-    color: #2e7d32;
-    margin-bottom: 6px;
-}
-
-.gia-su-page .faq-item .answer {
-    margin: 0;
+.gsp-faq-item .answer {
+  font-size: 15px;
+  color: #3a4a5c;
+  line-height: 1.7;
 }
 
 /* ===== CTA ===== */
-.gia-su-page .cta {
-    text-align: center;
-    margin-top: 50px;
+.gsp-cta {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  padding: 90px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-
-.gia-su-page .btn-register {
-    display: inline-block;
-    background: linear-gradient(135deg, #2e7d32, #4caf50);
-    color: #fff !important;
-    padding: 14px 32px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none !important;
-    box-shadow: 0 6px 18px rgba(76, 175, 80, 0.3);
-    transition: 0.3s;
+.gsp-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
-
-.gia-su-page .btn-register:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 24px rgba(76, 175, 80, 0.4);
+.gsp-cta-inner { position: relative; z-index: 1; }
+.gsp-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.gsp-cta p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+.gsp-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #2e7d32;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 44px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+.gsp-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.24);
+  color: #1b5e20;
+  text-decoration: none;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .gia-su-page {
-        padding: 25px 15px;
-    }
-
-    .gia-su-page table {
-        font-size: 13px;
-    }
-
-    .gia-su-page th,
-    .gia-su-page td {
-        padding: 8px;
-    }
-
-    .gia-su-page .benefits {
-        grid-template-columns: 1fr;
-    }
+  .gsp-section { padding: 48px 20px; }
+  .gsp-bg-green { padding: 48px 20px; }
+  .gsp table { font-size: 13px; }
+  .gsp th, .gsp td { padding: 9px 8px; }
+  .gsp-benefits { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .gsp-hero { padding: 60px 15px 70px; }
+  .gsp-section { padding: 36px 15px; }
+  .gsp-bg-green { padding: 36px 15px; }
 }
 </style>
 
-<div class="gia-su-page">
+<div class="gsp">
 
-<div class="pricing-monthly">
-
-    <!-- Tiêu đề -->
-    <div class="section-header">
-        <h2 style="color: #2e7d32;">Bảng Giá - Gói Kèm Học Theo Tháng</h2>
-        <p class="subtitle">Lộ trình rõ ràng – tiết kiệm – cá nhân hóa</p>
+  <!-- HERO -->
+  <div class="gsp-hero">
+    <div class="gsp-hero-inner">
+      <div class="gsp-hero-badge">Gói kèm học theo tháng</div>
+      <h1>Bảng Giá</h1>
+      <p>Lộ trình rõ ràng – tiết kiệm – cá nhân hóa</p>
     </div>
+  </div>
 
-    <!-- Mô tả -->
-    <div class="section">
-        <h3>👉 Mô tả</h3>
-        <div class="box">
-            <p>
-                Học dài hạn với lộ trình rõ ràng, tiết kiệm hơn đặt lẻ. 
-                Gia sư xây dựng kế hoạch học tập cá nhân hóa và theo dõi tiến độ từng tuần.
-            </p>
-        </div>
+  <!-- MÔ TẢ -->
+  <div class="gsp-section">
+    <h2 class="gsp-section-title">👉 Mô <span class="accent">tả</span></h2>
+    <div class="gsp-divider"></div>
+    <div class="gsp-box">
+      Học dài hạn với lộ trình rõ ràng, tiết kiệm hơn đặt lẻ.
+      Gia sư xây dựng kế hoạch học tập cá nhân hóa và theo dõi tiến độ từng tuần.
     </div>
+  </div>
 
-    <!-- Lý do chọn -->
-    <div class="section">
-        <h3>👉 Tại sao chọn kèm theo tháng?</h3>
-        <ul class="benefits">
-            <li>🎯 Lộ trình học cá nhân hóa theo năng lực</li>
-            <li>💰 Tiết kiệm hơn 20% so với đặt lẻ từng buổi</li>
-            <li>📊 Báo cáo tiến độ học tập hàng tuần</li>
-            <li>⏰ Ưu tiên đặt lịch khung giờ vàng</li>
-            <li>🎓 Hỗ trợ ôn thi học kỳ và THPT Quốc gia</li>
-            <li>🤝 Đổi gia sư nếu không phù hợp</li>
-        </ul>
+  <!-- LÝ DO CHỌN -->
+  <div class="gsp-bg-green">
+    <div class="gsp-section">
+      <h2 class="gsp-section-title">👉 Tại sao chọn kèm <span class="accent">theo tháng?</span></h2>
+      <div class="gsp-divider"></div>
+      <ul class="gsp-benefits">
+        <li>🎯 Lộ trình học cá nhân hóa theo năng lực</li>
+        <li>💰 Tiết kiệm hơn 20% so với đặt lẻ từng buổi</li>
+        <li>📊 Báo cáo tiến độ học tập hàng tuần</li>
+        <li>⏰ Ưu tiên đặt lịch khung giờ vàng</li>
+        <li>🎓 Hỗ trợ ôn thi học kỳ và THPT Quốc gia</li>
+        <li>🤝 Đổi gia sư nếu không phù hợp</li>
+      </ul>
     </div>
+  </div>
 
-    <!-- Bảng giá -->
-    <div class="section">
-        <h3>👉 Bảng giá các gói</h3>
+  <!-- BẢNG GIÁ -->
+  <div class="gsp-section">
+    <h2 class="gsp-section-title">👉 Bảng giá <span class="accent">các gói</span></h2>
+    <div class="gsp-divider"></div>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Gói</th>
+          <th>Số buổi</th>
+          <th>Thời lượng</th>
+          <th>Giá</th>
+          <th>Tiết kiệm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="plan">Cơ bản</td>
+          <td>4 buổi/tháng</td>
+          <td>60 phút</td>
+          <td>300.000đ</td>
+          <td>10%</td>
+        </tr>
+        <tr class="highlight">
+          <td class="plan">Tiêu chuẩn ⭐</td>
+          <td>8 buổi/tháng</td>
+          <td>60 phút</td>
+          <td>550.000đ</td>
+          <td>15%</td>
+        </tr>
+        <tr>
+          <td class="plan">Nâng cao</td>
+          <td>12 buổi/tháng</td>
+          <td>60 phút</td>
+          <td>750.000đ</td>
+          <td>20%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-        <table class="pricing-table">
-            <thead>
-                <tr>
-                    <th>Gói</th>
-                    <th>Số buổi</th>
-                    <th>Thời lượng</th>
-                    <th>Giá</th>
-                    <th>Tiết kiệm</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="plan">Cơ bản</td>
-                    <td>4 buổi/tháng</td>
-                    <td>60 phút</td>
-                    <td>300.000đ</td>
-                    <td>10%</td>
-                </tr>
-                <tr class="highlight">
-                    <td class="plan">Tiêu chuẩn ⭐</td>
-                    <td>8 buổi/tháng</td>
-                    <td>60 phút</td>
-                    <td>550.000đ</td>
-                    <td>15%</td>
-                </tr>
-                <tr>
-                    <td class="plan">Nâng cao</td>
-                    <td>12 buổi/tháng</td>
-                    <td>60 phút</td>
-                    <td>750.000đ</td>
-                    <td>20%</td>
-                </tr>
-            </tbody>
-        </table>
+  <!-- ĐỐI TƯỢNG -->
+  <div class="gsp-bg-green">
+    <div class="gsp-section">
+      <h2 class="gsp-section-title">👉 Gói phù hợp <span class="accent">với ai?</span></h2>
+      <div class="gsp-divider"></div>
+      <table class="target-table">
+        <tbody>
+          <tr>
+            <td>🎓 Học sinh cần ôn thi học kỳ</td>
+            <td>Gói Cơ bản</td>
+          </tr>
+          <tr>
+            <td>📚 Ôn thi THPT Quốc gia</td>
+            <td>Gói Tiêu chuẩn</td>
+          </tr>
+          <tr>
+            <td>🧑‍🎓 Sinh viên học lại môn</td>
+            <td>Gói Tiêu chuẩn</td>
+          </tr>
+          <tr>
+            <td>🌍 Luyện IELTS/TOEIC</td>
+            <td>Gói Nâng cao</td>
+          </tr>
+          <tr>
+            <td>🚀 Cải thiện toàn diện</td>
+            <td>Gói Nâng cao</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 
-    <!-- Đối tượng -->
-    <div class="section">
-        <h3>👉 Gói phù hợp với ai?</h3>
+  <!-- SO SÁNH -->
+  <div class="gsp-section">
+    <h2 class="gsp-section-title">👉 So sánh <span class="accent">3 gói</span></h2>
+    <div class="gsp-divider"></div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Tính năng</th>
+          <th>Cơ bản</th>
+          <th>Tiêu chuẩn</th>
+          <th>Nâng cao</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Số buổi</td>
+          <td>4</td>
+          <td>8</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>Lộ trình cá nhân</td>
+          <td>✔</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td>Báo cáo tiến độ</td>
+          <td>✖</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td>Ưu tiên lịch</td>
+          <td>✖</td>
+          <td>✖</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td>Hỗ trợ ngoài giờ</td>
+          <td>✖</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td>Tiết kiệm</td>
+          <td>10%</td>
+          <td>15%</td>
+          <td>20%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-        <table class="target-table">
-            <tbody>
-                <tr>
-                    <td>🎓 Học sinh cần ôn thi học kỳ</td>
-                    <td>Gói Cơ bản</td>
-                </tr>
-                <tr>
-                    <td>📚 Ôn thi THPT Quốc gia</td>
-                    <td>Gói Tiêu chuẩn</td>
-                </tr>
-                <tr>
-                    <td>🧑‍🎓 Sinh viên học lại môn</td>
-                    <td>Gói Tiêu chuẩn</td>
-                </tr>
-                <tr>
-                    <td>🌍 Luyện IELTS/TOEIC</td>
-                    <td>Gói Nâng cao</td>
-                </tr>
-                <tr>
-                    <td>🚀 Cải thiện toàn diện</td>
-                    <td>Gói Nâng cao</td>
-                </tr>
-            </tbody>
-        </table>
+  <!-- FAQ -->
+  <!-- <div class="gsp-bg-green">
+    <div class="gsp-section">
+      <h2 class="gsp-section-title">🧱 Câu hỏi <span class="accent">thường gặp</span></h2>
+      <div class="gsp-divider"></div>
+
+      <div class="gsp-faq-item">
+        <p class="question">❓ Nếu không học hết buổi trong tháng?</p>
+        <p class="answer">Buổi học được bảo lưu sang tháng sau.</p>
+      </div>
+
+      <div class="gsp-faq-item">
+        <p class="question">❓ Có thể đổi gia sư không?</p>
+        <p class="answer">Có thể yêu cầu đổi nếu không phù hợp.</p>
+      </div>
+
+      <div class="gsp-faq-item">
+        <p class="question">❓ Thanh toán như thế nào?</p>
+        <p class="answer">Chuyển khoản ngân hàng hoặc ví MoMo.</p>
+      </div>
+
+      <div class="gsp-faq-item">
+        <p class="question">❓ Có hoàn tiền không?</p>
+        <p class="answer">Hoàn tiền buổi chưa học nếu hủy trước 24h.</p>
+      </div>
     </div>
+  </div> -->
 
-    <!-- So sánh -->
-    <div class="section">
-        <h3>👉 So sánh 3 gói</h3>
-
-        <table class="compare-table">
-            <thead>
-                <tr>
-                    <th>Tính năng</th>
-                    <th>Cơ bản</th>
-                    <th>Tiêu chuẩn</th>
-                    <th>Nâng cao</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Số buổi</td>
-                    <td>4</td>
-                    <td>8</td>
-                    <td>12</td>
-                </tr>
-                <tr>
-                    <td>Lộ trình cá nhân</td>
-                    <td>✔</td>
-                    <td>✔</td>
-                    <td>✔</td>
-                </tr>
-                <tr>
-                    <td>Báo cáo tiến độ</td>
-                    <td>✖</td>
-                    <td>✔</td>
-                    <td>✔</td>
-                </tr>
-                <tr>
-                    <td>Ưu tiên lịch</td>
-                    <td>✖</td>
-                    <td>✖</td>
-                    <td>✔</td>
-                </tr>
-                <tr>
-                    <td>Hỗ trợ ngoài giờ</td>
-                    <td>✖</td>
-                    <td>✔</td>
-                    <td>✔</td>
-                </tr>
-                <tr>
-                    <td>Tiết kiệm</td>
-                    <td>10%</td>
-                    <td>15%</td>
-                    <td>20%</td>
-                </tr>
-            </tbody>
-        </table>
+  <!-- CTA -->
+  <div class="gsp-cta">
+    <div class="gsp-cta-inner">
+      <h2>Sẵn sàng bắt đầu chưa?</h2>
+      <p>Tham gia cùng hàng nghìn học viên đang học hiệu quả hơn mỗi ngày.</p>
+      <a href="#" class="gsp-cta-btn">Đăng ký gói học ngay</a>
     </div>
-
-    <!-- FAQ -->
-    <div class="section faq">
-        <h3>🧱 Câu hỏi thường gặp</h3>
-
-        <div class="faq-item">
-            <p class="question">❓ Nếu không học hết buổi trong tháng?</p>
-            <p class="answer">Buổi học được bảo lưu sang tháng sau.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="question">❓ Có thể đổi gia sư không?</p>
-            <p class="answer">Có thể yêu cầu đổi nếu không phù hợp.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="question">❓ Thanh toán như thế nào?</p>
-            <p class="answer">Chuyển khoản ngân hàng hoặc ví MoMo.</p>
-        </div>
-
-        <div class="faq-item">
-            <p class="question">❓ Có hoàn tiền không?</p>
-            <p class="answer">Hoàn tiền buổi chưa học nếu hủy trước 24h.</p>
-        </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="cta">
-        <a href="#" class="btn-register">Đăng ký gói học ngay</a>
-    </div>
-
-</div>
+  </div>
 
 </div>

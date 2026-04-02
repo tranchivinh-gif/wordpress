@@ -1,213 +1,318 @@
+<!-- PASTE VÀO WORDPRESS -->
+
 <style>
-        /* chinh trang gia su */
-    /* ===== FIX SCOPE ===== */
-    .gia-su-page * {
-    box-sizing: border-box;
-    }
+/* ===== RESET ===== */
+.tutor-page * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ===== BASE ===== */
-    .gia-su-page {
-    font-family: 'Be Vietnam Pro', sans-serif !important;
-    color: #3a4a5c;
-    max-width: 1060px;
-    margin: auto;
-    padding: 40px 20px;
-    }
+/* ===== FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
 
-    /* ===== TITLE ===== */
-    .gia-su-page h2 {
-    font-family: 'Playfair Display', serif !important;
-    font-size: clamp(28px, 4vw, 42px);
-    text-align: center;
-    color: #1a2332;
-    margin-bottom: 30px;
-    }
+.tutor-page {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #3a4a5c;
+}
 
-    /* ===== BLOCKQUOTE ===== */
-    .gia-su-page blockquote {
-    background: linear-gradient(135deg, #e8f5e9, #f1f8f1);
-    border: 1.5px solid #c8e6c9;
-    border-radius: 18px;
-    padding: 30px;
-    margin-bottom: 30px;
-    }
+/* ===== HERO ===== */
+.tutor-hero {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+  padding: 90px 20px;
+  text-align: center;
+  color: #fff;
+}
 
-    /* ===== GRID FIX ===== */
-    .gia-su-page .row {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    }
+.tutor-hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px,5vw,56px);
+  margin-bottom: 16px;
+}
 
-    .gia-su-page .col {
-    flex: 1;
-    min-width: 280px;
-    }
+.tutor-hero p {
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.9;
+}
 
-    /* ===== LIST FIX ===== */
-    .gia-su-page ul {
-    list-style: none !important;
-    padding-left: 0 !important;
-    margin: 0;
-    }
+/* ===== SECTION ===== */
+.tutor-section {
+  max-width: 1060px;
+  margin: auto;
+  padding: 70px 20px;
+}
 
-    .gia-su-page ul li {
-    padding: 8px 0 8px 28px;
-    position: relative;
-    border-bottom: 1px solid #e8f5e9;
-    }
+.tutor-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 
-    .gia-su-page ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #4caf50;
-    font-weight: bold;
-    }
+.tutor-divider {
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg,#4caf50,#2e7d32);
+  margin: 0 auto 40px;
+}
 
-    /* ===== TABLE FIX ===== */
-    .gia-su-page table {
-    width: 100% !important;
-    border-collapse: collapse;
-    margin: 20px 0;
-    border-radius: 12px;
-    overflow: hidden;
-    }
+/* ===== GRID ===== */
+.tutor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
 
-    .gia-su-page th {
-    background: linear-gradient(135deg, #2e7d32, #4caf50);
-    color: #fff;
-    padding: 12px;
-    }
+/* ===== CARD ===== */
+.tutor-card {
+  background: linear-gradient(135deg,#e8f5e9,#f1f8f1);
+  border: 1.5px solid #c8e6c9;
+  border-radius: 18px;
+  padding: 30px;
+  transition: 0.25s;
+}
 
-    .gia-su-page td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #e8f5e9;
-    }
+.tutor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
 
-    /* ===== BUTTON ===== */
-    .gia-su-page .btn-primary {
-    display: inline-block;
-    background: linear-gradient(135deg, #2e7d32, #4caf50);
-    color: #fff !important;
-    padding: 12px 26px;
-    border-radius: 50px;
-    text-decoration: none !important;
-    }
+/* ===== LIST ===== */
+.tutor-list {
+  list-style: none;
+}
 
-    /* ===== IMAGE ===== */
-    .gia-su-page img {
-    border-radius: 16px;
-    max-width: 100%;
-    }
+.tutor-list li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+}
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-    .gia-su-page .row {
-        flex-direction: column;
-    }
-    }
-    /* chinh trang gia su */
+.tutor-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+}
 
+/* ===== TABLE ===== */
+.tutor-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tutor-table th {
+  background: linear-gradient(135deg,#2e7d32,#4caf50);
+  color: #fff;
+  padding: 12px;
+}
+
+.tutor-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e8f5e9;
+}
+
+/* ===== CTA ===== */
+.tutor-cta {
+  background: linear-gradient(135deg,#2e7d32,#4caf50);
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.tutor-btn {
+  background: #fff;
+  color: #2e7d32;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.tutor-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .tutor-grid { grid-template-columns:1fr; }
+}
+.tutor-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* lớp nền hiệu ứng */
+.tutor-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(76,175,80,0.3) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 50%, rgba(46,125,50,0.2) 0%, transparent 60%);
+}
+
+/* đường cong đáy */
+.tutor-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+/* ===== BACKGROUND GIỐNG TEMPLATE ===== */
+.tutor-alt-bg {
+  background: #e8f5e9;
+  border-radius: 30px;
+  padding: 70px 30px;
+}
+
+/* ===== GRID CĂN GIỮA ===== */
+.tutor-zigzag {
+  align-items: center;
+}
+
+/* ===== TEXT CARD ===== */
+.tutor-text {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* ===== LIST CARD ĐẸP HƠN ===== */
+.tutor-list-box {
+  background: linear-gradient(135deg,#2e7d32,#4caf50);
+  color: #fff;
+}
+
+.tutor-list-box li {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.tutor-list-box li::before {
+  color: #fff;
+}
+
+/* ===== ZIGZAG (XEN KẼ) ===== */
+.tutor-zigzag .tutor-text {
+  transform: translateY(20px);
+}
+
+.tutor-zigzag .tutor-list-box {
+  transform: translateY(-20px);
+}
+
+/* ===== HOVER ===== */
+.tutor-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
 </style>
 
-<div class="gia-su-page">
+<div class="tutor-page">
 
-    <h2 style="color: #2e7d32;"><code>Tìm Gia Sư - Học 1-1 Online Linh Hoạt</code></h2>
+  <!-- HERO -->
+  <div class="tutor-hero">
+    <h2>Tìm Gia Sư Online 1-1</h2>
+    <p>Học trực tiếp với gia sư qua Zoom hoặc Google Meet — linh hoạt, cá nhân hóa và hiệu quả.</p>
+  </div>
 
-    <blockquote>
-        <div class="row">
-            <div class="col">
-                <p><strong>👉 Mô tả:</strong></p>
-                <p>Học trực tiếp với gia sư qua Zoom hoặc Google Meet. Chọn đúng người, đúng môn, đúng giờ — hoàn toàn linh hoạt theo lịch của bạn.</p>
+  <!-- GIỚI THIỆU -->
+  <div class="tutor-section tutor-alt-bg">
+        <div class="tutor-title">Tại sao chọn học 1-1?</div>
+        <div class="tutor-divider"></div>
+
+        <div class="tutor-grid tutor-zigzag">
+            <div class="tutor-card tutor-text">
+            <p>Học trực tiếp với gia sư theo lịch của bạn, tập trung đúng điểm yếu.</p>
             </div>
 
-            <div class="col">
-                <p><strong>👉 Tại sao chọn học 1-1?</strong></p>
-                <ul>
-                    <li>✅ Học qua Zoom / Google Meet tiện lợi</li>
-                    <li>✅ Chọn buổi học 45 / 60 / 90 phút</li>
-                    <li>✅ Đặt lịch linh hoạt theo thời gian rảnh</li>
-                    <li>✅ Gia sư tập trung vào điểm yếu của riêng bạn</li>
-                    <li>✅ Giảng lại bài tập đã giải nếu chưa hiểu</li>
-                    <li>✅ Ghi lại buổi học để xem lại sau</li>
-                </ul>
-            </div>
-        </div>
-    </blockquote>
-
-    <p><strong>👉 Các gói học 1-1:</strong></p>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Gói</th>
-                <th>Thời lượng</th>
-                <th>Giá</th>
-                <th>Phù hợp</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Buổi ngắn</td>
-                <td>45 phút</td>
-                <td>Từ 80.000đ</td>
-                <td>Giải đáp 1 vấn đề cụ thể</td>
-            </tr>
-            <tr>
-                <td>Buổi tiêu chuẩn</td>
-                <td>60 phút</td>
-                <td>Từ 100.000đ</td>
-                <td>Ôn tập 1 chủ đề</td>
-            </tr>
-            <tr>
-                <td>Buổi chuyên sâu</td>
-                <td>90 phút</td>
-                <td>Từ 140.000đ</td>
-                <td>Học kỹ, hỏi nhiều</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <p><strong>👉 Quy trình đặt lịch:</strong></p>
-
-    <table>
-        <tr>
-            <td>Bước 1</td>
-            <td>Bước 2</td>
-            <td>Bước 3</td>
-            <td>Bước 4</td>
-        </tr>
-        <tr>
-            <td>📚 Chọn môn & cấp học</td>
-            <td>👨‍🏫 Chọn gia sư phù hợp</td>
-            <td>💳 Thanh toán online</td>
-            <td>💻 Học đúng giờ qua Zoom/Meet</td>
-        </tr>
-    </table>
-
-    <p><strong>👉 Gia sư của chúng tôi là ai?</strong></p>
-
-    <blockquote>
-        <p>Tất cả gia sư trên nền tảng đều được kiểm duyệt kỹ càng trước khi tiếp nhận học viên:</p>
-    </blockquote>
-
-    <div class="row">
-        <div class="col">
-            <ul>
-                <li>🎓 Sinh viên giỏi các trường Đại học uy tín</li>
-                <li>👨‍🏫 Giáo viên, giảng viên có kinh nghiệm giảng dạy</li>
-                <li>📊 Người có chuyên môn và kinh nghiệm thực tế</li>
-                <li>⭐ Được đánh giá minh bạch từ học viên thực tế</li>
+            <div class="tutor-card tutor-list-box">
+            <ul class="tutor-list">
+                <li>Học qua Zoom / Google Meet</li>
+                <li>Chọn buổi 45 / 60 / 90 phút</li>
+                <li>Linh hoạt thời gian</li>
+                <li>Cá nhân hóa nội dung học</li>
+                <li>Giảng lại nếu chưa hiểu</li>
+                <li>Có thể xem lại bài học</li>
             </ul>
-
-            <a href="#" class="btn-primary">Tìm gia sư ngay</a>
-        </div>
-
-        <div class="col">
-            <img src="https://hoangvu.site/wp-content/uploads/2026/03/a11.jpg" alt="" style="max-width:100%;">
+            </div>
         </div>
     </div>
+
+  <!-- GÓI HỌC -->
+  <div class="tutor-section">
+    <div class="tutor-title">Các gói học</div>
+    <div class="tutor-divider"></div>
+
+    <table class="tutor-table">
+      <tr>
+        <th>Gói</th>
+        <th>Thời lượng</th>
+        <th>Giá</th>
+        <th>Phù hợp</th>
+      </tr>
+      <tr>
+        <td>Buổi ngắn</td>
+        <td>45 phút</td>
+        <td>80.000đ</td>
+        <td>Giải nhanh</td>
+      </tr>
+      <tr>
+        <td>Tiêu chuẩn</td>
+        <td>60 phút</td>
+        <td>100.000đ</td>
+        <td>Ôn tập</td>
+      </tr>
+      <tr>
+        <td>Chuyên sâu</td>
+        <td>90 phút</td>
+        <td>140.000đ</td>
+        <td>Học kỹ</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- QUY TRÌNH -->
+  <div class="tutor-section">
+    <div class="tutor-title">Quy trình học</div>
+    <div class="tutor-divider"></div>
+
+    <div class="tutor-grid">
+      <div class="tutor-card">📚 Chọn môn & cấp học</div>
+      <div class="tutor-card">👨‍🏫 Chọn gia sư</div>
+      <div class="tutor-card">💳 Thanh toán</div>
+      <div class="tutor-card">💻 Học online</div>
+    </div>
+  </div>
+
+  <!-- GIA SƯ -->
+  <div class="tutor-section">
+    <div class="tutor-title">Gia sư của chúng tôi</div>
+    <div class="tutor-divider"></div>
+
+    <div class="tutor-grid">
+      <div class="tutor-card">
+        <ul class="tutor-list">
+          <li>Sinh viên giỏi</li>
+          <li>Giáo viên kinh nghiệm</li>
+          <li>Chuyên môn cao</li>
+          <li>Đánh giá minh bạch</li>
+        </ul>
+      </div>
+
+      <div>
+        <img src="https://hoangvu.site/wp-content/uploads/2026/03/a11.jpg" style="width:100%; border-radius:16px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="tutor-cta">
+    <h2>Bắt đầu học ngay hôm nay</h2>
+    <p>Chọn gia sư phù hợp và học theo cách của bạn.</p>
+    <a href="#" class="tutor-btn">Tìm gia sư ngay</a>
+  </div>
 
 </div>

@@ -1,264 +1,565 @@
+<!-- PASTE TOÀN BỘ ĐOẠN NÀY VÀO WORDPRESS CUSTOM HTML BLOCK -->
 <style>
-/* ===== SCOPE ===== */
-.gia-su-page * {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+/* ===== RESET ===== */
+.dbt * { box-sizing: border-box; margin: 0; padding: 0; }
+
+.dbt {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #3a4a5c;
+  background: #fff;
+  overflow-x: hidden;
 }
 
-/* ===== CONTAINER ===== */
-.gia-su-page {
-    font-family: 'Be Vietnam Pro', sans-serif !important;
-    color: #3a4a5c;
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+/* ===== HERO ===== */
+.dbt-hero {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 55%, #2e7d32 100%);
+  padding: 90px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.dbt-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 50%, rgba(76,175,80,0.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 40%, rgba(46,125,50,0.18) 0%, transparent 55%);
+}
+.dbt-hero::after {
+  content: '';
+  position: absolute; bottom: -1px; left: 0; right: 0;
+  height: 60px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.dbt-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+
+.dbt-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #a5d6a7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 22px;
+}
+.dbt-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5.5vw, 56px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.dbt-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 560px;
+  margin: 0 auto 28px;
+}
+.dbt-hero-btn {
+  display: inline-block;
+  background: #fff;
+  color: #2e7d32;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.3px;
+}
+.dbt-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.26);
+  color: #1b5e20;
+  text-decoration: none;
 }
 
-/* ===== TITLE ===== */
-.gia-su-page h2 {
-    font-family: 'Playfair Display', serif !important;
-    font-size: clamp(28px, 4vw, 42px);
-    text-align: center;
-    color: #1a2332;
-    margin-bottom: 25px;
+/* ===== TIMER BADGE ===== */
+.dbt-timer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin: 0 auto 20px;
+}
+.dbt-timer-dot {
+  width: 8px; height: 8px;
+  background: #69f0ae;
+  border-radius: 50%;
+  animation: pulse-dot 1.4s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
 }
 
-/* ===== GRID ===== */
-.gia-su-page .row {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+/* ===== SECTION WRAPPER ===== */
+.dbt-section {
+  padding: 72px 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.dbt-section-title {
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  color: #1a2332;
+  text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: -0.4px;
+}
+.dbt-section-title .accent { color: #4caf50; }
+.dbt-divider {
+  width: 48px; height: 4px;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  border-radius: 4px;
+  margin: 0 auto 40px;
 }
 
-.gia-su-page .col {
-    flex: 1;
-    min-width: 280px;
+/* ===== BG ALTERNATING ===== */
+.dbt-bg-green { background: #e8f5e9; }
+.dbt-bg-green .dbt-section { padding: 72px 20px; }
+
+/* ===== MÔ TẢ BOX ===== */
+.dbt-desc-box {
+  background: linear-gradient(135deg, #e8f5e9, #f9fff9);
+  border: 1px solid #c8e6c9;
+  border-radius: 16px;
+  padding: 28px 32px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #3a4a5c;
+  text-align: center;
 }
 
-/* ===== TEXT LABEL ===== */
-.gia-su-page .col p:first-child {
-    font-weight: bold;
-    color: #1b5e20;
+/* ===== BENEFITS GRID ===== */
+.dbt-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  list-style: none;
+}
+.dbt-benefits li {
+  background: #fff;
+  border: 1px solid #c8e6c9;
+  border-radius: 14px;
+  padding: 16px 16px 16px 48px;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 0 2px 10px rgba(46,125,50,0.05);
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.dbt-benefits li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(46,125,50,0.1);
+}
+.dbt-benefits li .benefit-icon {
+  position: absolute;
+  left: 14px; top: 50%; transform: translateY(-50%);
+  width: 26px; height: 26px;
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 700;
 }
 
-/* ===== LIST ===== */
-.gia-su-page ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+/* ===== PRICING TABLE ===== */
+.dbt-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.dbt-price-card {
+  background: #fff;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
+  position: relative;
+  overflow: hidden;
+}
+.dbt-price-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  border-radius: 18px 18px 0 0;
+}
+.dbt-price-card:nth-child(1)::before { background: linear-gradient(90deg, #81c784, #4caf50); }
+.dbt-price-card:nth-child(2)::before { background: linear-gradient(90deg, #4caf50, #2e7d32); }
+.dbt-price-card:nth-child(3)::before { background: linear-gradient(90deg, #2e7d32, #1b5e20); }
+.dbt-price-card:nth-child(4)::before { background: linear-gradient(90deg, #f59f00, #f6c344); }
+.dbt-price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(46,125,50,0.12);
+  border-color: #81c784;
+}
+.dbt-price-card.featured {
+  border-color: #4caf50;
+  border-width: 2px;
+}
+.dbt-price-card.featured .featured-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+.dbt-price-card:not(.featured) .featured-badge { display: none; }
+.price-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+.price-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 8px;
+}
+.price-desc {
+  font-size: 13px;
+  color: #607d8b;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.price-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2e7d32;
+  line-height: 1;
+}
+.price-amount span {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 14px;
+  color: #607d8b;
+  font-weight: 400;
 }
 
-.gia-su-page ul li {
-    background: #f1f8f1;
-    border: 1px solid #e0f2e9;
-    border-radius: 10px;
-    padding: 10px 12px 10px 30px;
-    margin-bottom: 8px;
-    position: relative;
+/* ===== STEPS ===== */
+.dbt-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
 }
-
-.gia-su-page ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 10px;
-    color: #4caf50;
-    font-weight: bold;
+.dbt-steps::before {
+  content: '';
+  position: absolute;
+  top: 36px; left: calc(16.66% + 20px); right: calc(16.66% + 20px);
+  height: 2px;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  z-index: 0;
+}
+.dbt-step {
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+.dbt-step-num {
+  width: 72px; height: 72px;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(46,125,50,0.3);
+  border: 4px solid #fff;
+}
+.dbt-step-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 8px;
+}
+.dbt-step-desc {
+  font-size: 14px;
+  color: #607d8b;
+  line-height: 1.65;
 }
 
 /* ===== TABLE ===== */
-.gia-su-page table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+.dbt table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
-
-.gia-su-page th {
-    background: linear-gradient(135deg, #2e7d32, #4caf50);
-    color: #fff;
-    padding: 14px;
-    font-weight: 600;
+.dbt th {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: #fff;
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
 }
-
-.gia-su-page td {
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #e8f5e9;
+.dbt td {
+  padding: 13px 18px;
+  border-bottom: 1px solid #e8f5e9;
+  font-size: 15px;
+  vertical-align: middle;
 }
-
-/* ===== TABLE HOVER ===== */
-.gia-su-page table tr:hover {
-    background: #f9fff9;
-}
-
-/* ===== STEP BOX ===== */
-.gia-su-page h3 {
-    color: #2e7d32;
-    margin-bottom: 10px;
-}
-
-.gia-su-page .col h3 {
-    background: #e8f5e9;
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
-}
+.dbt tr:last-child td { border-bottom: none; }
+.dbt tr:hover td { background: #f9fff9; }
 
 /* ===== CTA ===== */
-.gia-su-page code {
-    background: #e8f5e9;
-    padding: 4px 8px;
-    border-radius: 6px;
-    color: #2e7d32;
-    font-weight: bold;
+.dbt-cta {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  padding: 90px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.dbt-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.dbt-cta-inner { position: relative; z-index: 1; }
+.dbt-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.dbt-cta p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 36px;
+  font-weight: 300;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dbt-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #2e7d32;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 44px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.dbt-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.24);
+  color: #1b5e20;
+  text-decoration: none;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .gia-su-page {
-        padding: 25px 15px;
-    }
-
-    .gia-su-page .row {
-        flex-direction: column;
-    }
-
-    .gia-su-page table {
-        font-size: 13px;
-    }
-
-    .gia-su-page th,
-    .gia-su-page td {
-        padding: 8px;
-    }
+  .dbt-steps { grid-template-columns: 1fr; gap: 32px; }
+  .dbt-steps::before { display: none; }
+  .dbt-pricing-grid { grid-template-columns: 1fr 1fr; }
+  .dbt table { font-size: 13px; }
+  .dbt th, .dbt td { padding: 10px 12px; }
+}
+@media (max-width: 480px) {
+  .dbt-pricing-grid { grid-template-columns: 1fr; }
+  .dbt-hero { padding: 60px 16px 76px; }
+  .dbt-section { padding: 48px 16px; }
 }
 </style>
 
-<!-- FIX QUAN TRỌNG: thêm wrapper -->
-<div class="gia-su-page">
+<div class="dbt">
 
-<div class="dang-bai-tap">
-
-    <h2><code>Đăng Bài Tập - Nhận Lời Giải Trong 30 Phút</code></h2>
-
-    <div class="row">
-        <div class="col">
-            <p>👉<strong>Mô tả:</strong></p>
-            <p>
-                Chỉ cần mô tả bài tập hoặc chụp ảnh đề bài, gia sư sẽ tiếp nhận 
-                và gửi lời giải chi tiết kèm hướng dẫn phương pháp trong 30–60 phút.
-            </p>
-        </div>
-
-        <div class="col">
-            <p>👉<strong>Tại sao chọn dịch vụ giải bài tập?</strong></p>
-            <ul>
-                <li>✅ Nhận lời giải trong 30–60 phút</li>
-                <li>✅ Hướng dẫn phương pháp chi tiết, không chỉ đưa đáp án</li>
-                <li>✅ Hỗ trợ Toán, Lý, Hóa, Tiếng Anh, Tin học</li>
-                <li>✅ Giải bài nhanh khẩn cấp trước deadline</li>
-                <li>✅ Chỉnh sửa lời giải nếu chưa đúng yêu cầu</li>
-                <li>✅ Lời giải được kiểm duyệt bởi người có chuyên môn</li>
-            </ul>
-        </div>
+  <!-- HERO -->
+  <div class="dbt-hero">
+    <div class="dbt-hero-inner">
+      <div class="dbt-hero-badge">Dịch vụ giải bài tập</div>
+      <div class="dbt-timer">
+        <span class="dbt-timer-dot"></span>
+        Đang tiếp nhận bài tập — phản hồi trong 30 phút
+      </div>
+      <h1>Đăng Bài Tập<br>Nhận Lời Giải Chi Tiết</h1>
+      <p>Chụp ảnh hoặc mô tả đề bài — gia sư chuyên môn sẽ gửi lời giải kèm hướng dẫn phương pháp trong 30–60 phút.</p>
+      <a href="#" class="dbt-hero-btn">Đăng bài tập ngay →</a>
     </div>
+  </div>
 
-    <p><strong>👉Các gói dịch vụ:</strong></p>
-
-    <table class="bang-gia">
-        <thead>
-            <tr>
-                <th>Gói</th>
-                <th>Mô tả</th>
-                <th>Giá</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>📝Giải 1 bài lẻ</td>
-                <td>Phù hợp khi chỉ cần hỗ trợ 1 bài</td>
-                <td>💰Từ 25.000đ</td>
-            </tr>
-            <tr>
-                <td>💰Gói 5 bài</td>
-                <td>Tiết kiệm hơn so với mua lẻ</td>
-                <td>💰Từ 100.000đ</td>
-            </tr>
-            <tr>
-                <td>⭐Gói 10 bài</td>
-                <td>Tiết kiệm nhất, học thường xuyên</td>
-                <td>💰Từ 170.000đ</td>
-            </tr>
-            <tr>
-                <td>⏱ Giải nhanh 30 phút</td>
-                <td>Ưu tiên xử lý gấp trước deadline</td>
-                <td>💰Từ 50.000đ</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <p><strong>👉Quy trình 3 bước:</strong></p>
-
-    <div class="row">
-        <div class="col">
-            <h3>🟢 Bước 1</h3>
-            <p><strong>📌 Đăng bài tập</strong><br>Mô tả hoặc chụp ảnh đề bài</p>
-        </div>
-
-        <div class="col">
-            <h3>🔵 Bước 2 👨‍🏫</h3>
-            <p><strong>📌 Gia sư tiếp nhận</strong><br>Gia sư phù hợp nhận và giải ngay</p>
-        </div>
-
-        <div class="col">
-            <h3>🟣 Bước 3</h3>
-            <p><strong>📌 Nhận lời giải</strong><br>Chi tiết kèm hướng dẫn</p>
-        </div>
+  <!-- MÔ TẢ -->
+  <div class="dbt-section">
+    <h2 class="dbt-section-title">👉 Mô <span class="accent">tả dịch vụ</span></h2>
+    <div class="dbt-divider"></div>
+    <div class="dbt-desc-box">
+      Chỉ cần mô tả bài tập hoặc chụp ảnh đề bài, gia sư sẽ tiếp nhận và gửi lời giải chi tiết kèm hướng dẫn phương pháp trong <strong>30–60 phút</strong>. Không cần đặt lịch, không cần chờ đợi lâu.
     </div>
+  </div>
 
-    <p><strong>👉Môn học hỗ trợ:</strong></p>
+  <!-- LÝ DO CHỌN -->
+  <div class="dbt-bg-green">
+    <div class="dbt-section">
+      <h2 class="dbt-section-title">👉 Tại sao chọn <span class="accent">dịch vụ giải bài tập?</span></h2>
+      <div class="dbt-divider"></div>
+      <ul class="dbt-benefits">
+        <li>
+          <span class="benefit-icon">✓</span>
+          <strong>Nhận lời giải trong 30–60 phút</strong> — kịp trước mọi deadline
+        </li>
+        <li>
+          <span class="benefit-icon">✓</span>
+          <strong>Hướng dẫn phương pháp chi tiết</strong> — không chỉ đưa đáp án
+        </li>
+        <li>
+          <span class="benefit-icon">✓</span>
+          <strong>Hỗ trợ Toán, Lý, Hóa, Anh, Tin</strong> — đa dạng môn học
+        </li>
+        <li>
+          <span class="benefit-icon">✓</span>
+          <strong>Giải bài khẩn cấp trước deadline</strong> — ưu tiên xử lý nhanh
+        </li>
+        <li>
+          <span class="benefit-icon">✓</span>
+          <strong>Chỉnh sửa nếu chưa đúng yêu cầu</strong> — cam kết chất lượng
+        </li>
+        <li>
+          <span class="benefit-icon">✓</span>
+          <strong>Kiểm duyệt bởi người có chuyên môn</strong> — lời giải chuẩn xác
+        </li>
+      </ul>
+    </div>
+  </div>
 
-    <table class="mon-hoc">
-        <thead>
-            <tr>
-                <th>📚Môn</th>
-                <th>🎓Cấp học</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>📘Toán học</td>
-                <td>🎒Lớp 9 → 🎓 Đại học</td>
-            </tr>
-            <tr>
-                <td>🌍Tiếng Anh</td>
-                <td>🎒Lớp 9 → 🌍 IELTS/TOEIC</td>
-            </tr>
-            <tr>
-                <td>⚡Vật lý</td>
-                <td>🏫Lớp 10 → 🎓 Đại học</td>
-            </tr>
-            <tr>
-                <td>🧪Hóa học</td>
-                <td>🏫Lớp 10 → 🎓 Đại học</td>
-            </tr>
-            <tr>
-                <td>💻Tin học</td>
-                <td>🏫THPT → 🎓 Đại học</td>
-            </tr>
-        </tbody>
+  <!-- QUY TRÌNH -->
+  <div class="dbt-section">
+    <h2 class="dbt-section-title">👉 Quy trình <span class="accent">3 bước đơn giản</span></h2>
+    <div class="dbt-divider"></div>
+    <div class="dbt-steps">
+      <div class="dbt-step">
+        <div class="dbt-step-num">1</div>
+        <div class="dbt-step-title">📌 Đăng bài tập</div>
+        <div class="dbt-step-desc">Mô tả hoặc chụp ảnh đề bài — ghi rõ môn học và yêu cầu của bạn</div>
+      </div>
+      <div class="dbt-step">
+        <div class="dbt-step-num">2</div>
+        <div class="dbt-step-title">👨‍🏫 Gia sư tiếp nhận</div>
+        <div class="dbt-step-desc">Gia sư phù hợp nhận bài và bắt đầu giải ngay — không cần chờ lâu</div>
+      </div>
+      <div class="dbt-step">
+        <div class="dbt-step-num">3</div>
+        <div class="dbt-step-title">📬 Nhận lời giải</div>
+        <div class="dbt-step-desc">Lời giải chi tiết kèm hướng dẫn phương pháp — gửi qua email hoặc tin nhắn</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GÓI DỊCH VỤ -->
+  <div class="dbt-bg-green">
+    <div class="dbt-section">
+      <h2 class="dbt-section-title">👉 Các gói <span class="accent">dịch vụ</span></h2>
+      <div class="dbt-divider"></div>
+      <div class="dbt-pricing-grid">
+
+        <div class="dbt-price-card">
+          <span class="price-icon">📝</span>
+          <div class="price-name">Giải 1 bài lẻ</div>
+          <div class="price-desc">Phù hợp khi chỉ cần hỗ trợ một bài duy nhất</div>
+          <div class="price-amount">25.000đ <span>/ bài</span></div>
+        </div>
+
+        <div class="dbt-price-card">
+          <span class="price-icon">💰</span>
+          <div class="price-name">Gói 5 bài</div>
+          <div class="price-desc">Tiết kiệm hơn so với mua lẻ — dùng linh hoạt</div>
+          <div class="price-amount">100.000đ <span>/ gói</span></div>
+        </div>
+
+        <div class="dbt-price-card featured">
+          <div class="featured-badge">⭐ Tiết kiệm nhất</div>
+          <span class="price-icon">🏆</span>
+          <div class="price-name">Gói 10 bài</div>
+          <div class="price-desc">Lựa chọn tốt nhất cho học sinh học thường xuyên</div>
+          <div class="price-amount">170.000đ <span>/ gói</span></div>
+        </div>
+
+        <div class="dbt-price-card">
+          <span class="price-icon">⚡</span>
+          <div class="price-name">Giải nhanh 30 phút</div>
+          <div class="price-desc">Ưu tiên xử lý gấp — lý tưởng trước deadline</div>
+          <div class="price-amount">50.000đ <span>/ bài</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MÔN HỌC -->
+  <div class="dbt-section">
+    <h2 class="dbt-section-title">👉 Môn học <span class="accent">hỗ trợ</span></h2>
+    <div class="dbt-divider"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>📚 Môn học</th>
+          <th>🎓 Cấp học</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>📘 Toán học</td>
+          <td>Lớp 9 → Đại học</td>
+        </tr>
+        <tr>
+          <td>🌍 Tiếng Anh</td>
+          <td>Lớp 9 → IELTS / TOEIC</td>
+        </tr>
+        <tr>
+          <td>⚡ Vật lý</td>
+          <td>Lớp 10 → Đại học</td>
+        </tr>
+        <tr>
+          <td>🧪 Hóa học</td>
+          <td>Lớp 10 → Đại học</td>
+        </tr>
+        <tr>
+          <td>💻 Tin học</td>
+          <td>THPT → Đại học</td>
+        </tr>
+      </tbody>
     </table>
+  </div>
 
-    <p>
-        <strong>Nút CTA:</strong> 
-        <code>Đăng bài tập ngay</code> → link đến Shop/WooCommerce
-        
-    </p>
-
-</div>
+  <!-- CTA -->
+  <div class="dbt-cta">
+    <div class="dbt-cta-inner">
+      <h2>Sẵn sàng đăng bài chưa?</h2>
+      <p>Chỉ mất 2 phút để gửi bài tập — gia sư sẽ phản hồi trong 30 phút.</p>
+      <a href="#" class="dbt-cta-btn">Đăng bài tập ngay →</a>
+    </div>
+  </div>
 
 </div>
