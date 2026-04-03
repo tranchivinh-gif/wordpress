@@ -1,0 +1,831 @@
+<!-- PASTE TOÀN BỘ ĐOẠN NÀY VÀO WORDPRESS CUSTOM HTML BLOCK -->
+<style>
+/* ===== RESET & BASE ===== */
+.service-page * { box-sizing: border-box; margin: 0; padding: 0; }
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
+
+.service-page {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #3a4a5c;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.service-hero {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+  padding: 90px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(76,175,80,0.3) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 50%, rgba(46,125,50,0.2) 0%, transparent 60%);
+}
+
+.service-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 60px;
+  background: #fff;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.service-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+
+.service-hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #a5d6a7;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+
+.service-hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 62px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.18;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ===== SECTION WRAPPER ===== */
+.service-section {
+  padding: 72px 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.service-section-title {
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 700;
+  color: #1a2332;
+  text-align: center;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.service-section-title .accent { color: #4caf50; }
+
+.service-divider {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  border-radius: 4px;
+  margin: 0 auto 40px;
+}
+
+/* ===== SERVICE CARDS ===== */
+.service-card-wrap {
+  padding: 72px 20px;
+}
+
+.service-card-wrap:nth-child(odd) {
+  background: #fff;
+}
+
+.service-card-wrap:nth-child(even) {
+  background: #e8f5e9;
+}
+
+.service-card-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.service-card-header-icon {
+  width: 64px; height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(46,125,50,0.25);
+}
+
+.service-card-header-text .service-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #4caf50;
+  margin-bottom: 4px;
+}
+
+.service-card-header-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3.5vw, 30px);
+  font-weight: 700;
+  color: #1a2332;
+  line-height: 1.25;
+}
+
+.service-card-desc {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #3a4a5c;
+  margin-bottom: 32px;
+  max-width: 700px;
+}
+
+/* Features & Pricing Grid */
+.service-fp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+/* Features Box */
+.service-features-box {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  border: 1.5px solid #c8e6c9;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.06);
+}
+
+.service-card-wrap:nth-child(even) .service-features-box {
+  background: #fff;
+}
+
+.service-box-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #2e7d32;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid #e8f5e9;
+}
+
+.service-feature-list { list-style: none; padding: 0; }
+
+.service-feature-list li {
+  font-size: 15px;
+  color: #3a4a5c;
+  line-height: 1.65;
+  padding: 9px 0 9px 30px;
+  position: relative;
+  border-bottom: 1px solid #f0f7f0;
+}
+
+.service-feature-list li:last-child { border-bottom: none; }
+
+.service-feature-list li::before {
+  content: '✅';
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+}
+
+/* Pricing Table */
+.service-pricing-box {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  border: 1.5px solid #c8e6c9;
+  box-shadow: 0 4px 20px rgba(46,125,50,0.06);
+}
+
+.service-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.service-pricing-table thead tr {
+  background: linear-gradient(90deg, #1b5e20, #2e7d32);
+}
+
+.service-pricing-table thead th {
+  padding: 11px 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+.service-pricing-table thead th:first-child { border-radius: 10px 0 0 10px; }
+.service-pricing-table thead th:last-child { border-radius: 0 10px 10px 0; }
+
+.service-pricing-table tbody tr {
+  border-bottom: 1px solid #e8f5e9;
+  transition: background 0.15s;
+}
+
+.service-pricing-table tbody tr:last-child { border-bottom: none; }
+.service-pricing-table tbody tr:hover { background: #f1f8f1; }
+
+.service-pricing-table tbody td {
+  padding: 11px 14px;
+  font-size: 14px;
+  color: #3a4a5c;
+  vertical-align: top;
+}
+
+.service-pricing-table tbody td:first-child {
+  font-weight: 600;
+  color: #1a2332;
+}
+
+.service-price-tag {
+  font-weight: 700;
+  color: #2e7d32;
+  white-space: nowrap;
+}
+
+.service-save-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+/* Steps */
+.service-steps-box {
+  background: linear-gradient(135deg, #e8f5e9, #f1f8f1);
+  border-radius: 18px;
+  padding: 28px 28px 24px;
+  border: 1.5px solid #c8e6c9;
+  margin-bottom: 28px;
+}
+
+.service-steps-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.service-steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #3a4a5c;
+  line-height: 1.5;
+  flex: 1 1 160px;
+}
+
+.service-step-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Suited for tags */
+.service-suited-box {
+  margin-bottom: 28px;
+}
+
+.service-suited-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.service-suited-list li {
+  background: #e8f5e9;
+  border: 1.5px solid #a5d6a7;
+  color: #1b5e20;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* CTA Button */
+.service-cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 24px rgba(46,125,50,0.28);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(46,125,50,0.38);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hover lift on boxes */
+.service-features-box,
+.service-pricing-box,
+.service-steps-box {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-features-box:hover,
+.service-pricing-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(46,125,50,0.13);
+}
+
+/* ===== COMPARISON TABLE ===== */
+.service-compare-wrap {
+  background: linear-gradient(180deg, #e8f5e9 0%, #fff 100%);
+  padding: 72px 20px;
+}
+
+.service-compare-inner { max-width: 1060px; margin: 0 auto; }
+
+.service-compare-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 32px rgba(46,125,50,0.10);
+}
+
+.service-compare-table thead tr {
+  background: linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+}
+
+.service-compare-table thead th {
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+
+.service-compare-table thead th:first-child {
+  text-align: left;
+  color: #a5d6a7;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.service-compare-table tbody tr {
+  border-bottom: 1px solid #e8f5e9;
+  transition: background 0.15s;
+}
+
+.service-compare-table tbody tr:last-child { border-bottom: none; }
+.service-compare-table tbody tr:hover { background: #f1f8f1; }
+
+.service-compare-table tbody tr:nth-child(odd) { background: #fafff9; }
+.service-compare-table tbody tr:nth-child(odd):hover { background: #f1f8f1; }
+
+.service-compare-table tbody td {
+  padding: 14px 20px;
+  font-size: 14px;
+  color: #3a4a5c;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.service-compare-table tbody td:first-child {
+  text-align: left;
+  font-weight: 700;
+  color: #1a2332;
+  border-right: 1.5px solid #e8f5e9;
+}
+
+.service-compare-table tbody td.highlight {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* ===== FINAL CTA ===== */
+.service-final-cta {
+  background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+  padding: 90px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.service-final-cta-inner { position: relative; z-index: 1; max-width: 580px; margin: 0 auto; }
+
+.service-final-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.service-final-cta p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.service-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.service-cta-btn-white {
+  display: inline-block;
+  background: #fff;
+  color: #2e7d32;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-cta-btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.24);
+  color: #1b5e20;
+  text-decoration: none;
+}
+
+.service-cta-btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.7);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.service-cta-btn-outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+  transform: translateY(-3px);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .service-fp-grid { grid-template-columns: 1fr; }
+  .service-compare-table thead th,
+  .service-compare-table tbody td { padding: 11px 10px; font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .service-steps-list { flex-direction: column; }
+}
+</style>
+
+<div class="service-page">
+
+  <!-- HERO -->
+  <div class="service-hero">
+    <div class="service-hero-inner">
+      <div class="service-hero-badge">Dịch vụ học tập</div>
+      <h2>Dịch Vụ Của Chúng Tôi</h2>
+      <p>Ba hình thức hỗ trợ học tập linh hoạt — từ giải bài tập nhanh đến học kèm dài hạn, phù hợp mọi nhu cầu và lịch trình.</p>
+    </div>
+  </div>
+
+  <!-- SERVICE 1: GIẢI BÀI TẬP -->
+  <div class="service-card-wrap">
+    <div class="service-card-inner">
+      <div class="service-card-header">
+        <div class="service-card-header-icon">📝</div>
+        <div class="service-card-header-text">
+          <div class="service-label">Dịch vụ 01</div>
+          <h2>Giải Bài Tập Theo Yêu Cầu</h2>
+        </div>
+      </div>
+      <p class="service-card-desc">Bạn đang bí bài tập? Không hiểu cách giải? Cần nộp bài gấp? Chỉ cần đăng bài tập lên, gia sư sẽ tiếp nhận và gửi lời giải chi tiết trong 30–60 phút.</p>
+
+      <div class="service-fp-grid">
+        <div class="service-features-box">
+          <div class="service-box-title">Tính năng nổi bật</div>
+          <ul class="service-feature-list">
+            <li>Nhận lời giải trong 30–60 phút</li>
+            <li>Hướng dẫn phương pháp chi tiết, không chỉ đưa đáp án</li>
+            <li>Hỗ trợ Toán, Lý, Hóa, Tiếng Anh, Tin học và nhiều môn khác</li>
+            <li>Giải bài nhanh khẩn cấp cho trường hợp gấp</li>
+            <li>Chỉnh sửa lời giải nếu chưa đúng yêu cầu</li>
+            <li>Lời giải được kiểm duyệt bởi người có chuyên môn</li>
+          </ul>
+        </div>
+        <div class="service-pricing-box">
+          <div class="service-box-title">Các gói dịch vụ</div>
+          <table class="service-pricing-table">
+            <thead>
+              <tr>
+                <th>Gói</th>
+                <th>Mô tả</th>
+                <th>Giá</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Giải 1 bài lẻ</td>
+                <td>Phù hợp khi chỉ cần hỗ trợ 1 bài cụ thể</td>
+                <td><span class="service-price-tag">Từ 25.000đ</span></td>
+              </tr>
+              <tr>
+                <td>Gói 5 bài</td>
+                <td>Tiết kiệm hơn so với mua lẻ</td>
+                <td><span class="service-price-tag">Từ 100.000đ</span></td>
+              </tr>
+              <tr>
+                <td>Gói 10 bài</td>
+                <td>Tiết kiệm nhất, phù hợp học thường xuyên</td>
+                <td><span class="service-price-tag">Từ 170.000đ</span></td>
+              </tr>
+              <tr>
+                <td>Giải nhanh 30 phút</td>
+                <td>Ưu tiên xử lý gấp trước deadline</td>
+                <td><span class="service-price-tag">Từ 50.000đ</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <a href="#" class="service-cta-btn">Đăng bài tập ngay</a>
+    </div>
+  </div>
+
+  <!-- SERVICE 2: HỌC KÈM 1-1 -->
+  <div class="service-card-wrap">
+    <div class="service-card-inner">
+      <div class="service-card-header">
+        <div class="service-card-header-icon">🎥</div>
+        <div class="service-card-header-text">
+          <div class="service-label">Dịch vụ 02</div>
+          <h2>Học Kèm 1-1 Online</h2>
+        </div>
+      </div>
+      <p class="service-card-desc">Học trực tiếp với gia sư qua Zoom hoặc Google Meet. Gia sư sẽ giải thích tận tình từng bước, giúp bạn hiểu bản chất vấn đề chứ không chỉ học thuộc lòng công thức.</p>
+
+      <div class="service-fp-grid">
+        <div class="service-features-box">
+          <div class="service-box-title">Tính năng nổi bật</div>
+          <ul class="service-feature-list">
+            <li>Học qua Zoom / Google Meet tiện lợi</li>
+            <li>Chọn buổi học 45 phút, 60 phút hoặc 90 phút</li>
+            <li>Đặt lịch linh hoạt theo thời gian rảnh của bạn</li>
+            <li>Gia sư giảng lại bài tập đã giải nếu chưa hiểu</li>
+            <li>Tập trung vào điểm yếu cụ thể của từng học viên</li>
+            <li>Có thể ghi lại buổi học để xem lại sau</li>
+          </ul>
+        </div>
+        <div class="service-pricing-box">
+          <div class="service-box-title">Các gói dịch vụ</div>
+          <table class="service-pricing-table">
+            <thead>
+              <tr>
+                <th>Gói</th>
+                <th>Thời lượng</th>
+                <th>Giá</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Buổi học ngắn</td>
+                <td>45 phút</td>
+                <td><span class="service-price-tag">Từ 80.000đ</span></td>
+              </tr>
+              <tr>
+                <td>Buổi học tiêu chuẩn</td>
+                <td>60 phút</td>
+                <td><span class="service-price-tag">Từ 100.000đ</span></td>
+              </tr>
+              <tr>
+                <td>Buổi học chuyên sâu</td>
+                <td>90 phút</td>
+                <td><span class="service-price-tag">Từ 140.000đ</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="service-box-title" style="margin-top:20px;">Quy trình đặt lịch</div>
+          <ol class="service-steps-list" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px;">
+            <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:#3a4a5c;">
+              <span class="service-step-num">1</span> Chọn môn học và gia sư phù hợp
+            </li>
+            <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:#3a4a5c;">
+              <span class="service-step-num">2</span> Chọn thời lượng và khung giờ mong muốn
+            </li>
+            <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:#3a4a5c;">
+              <span class="service-step-num">3</span> Thanh toán online
+            </li>
+            <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:#3a4a5c;">
+              <span class="service-step-num">4</span> Nhận link Zoom/Meet qua email
+            </li>
+            <li style="display:flex; align-items:center; gap:10px; font-size:14px; color:#3a4a5c;">
+              <span class="service-step-num">5</span> Học đúng giờ đã đặt
+            </li>
+          </ol>
+        </div>
+      </div>
+      <a href="#" class="service-cta-btn">Đặt lịch học ngay</a>
+    </div>
+  </div>
+
+  <!-- SERVICE 3: KÈM THEO THÁNG -->
+  <div class="service-card-wrap">
+    <div class="service-card-inner">
+      <div class="service-card-header">
+        <div class="service-card-header-icon">📅</div>
+        <div class="service-card-header-text">
+          <div class="service-label">Dịch vụ 03</div>
+          <h2>Kèm Học Theo Tháng</h2>
+        </div>
+      </div>
+      <p class="service-card-desc">Dành cho học sinh, sinh viên có nhu cầu học dài hạn với lộ trình rõ ràng. Gia sư sẽ xây dựng kế hoạch học tập cá nhân hóa, theo dõi tiến độ và điều chỉnh phù hợp theo từng tuần.</p>
+
+      <div class="service-fp-grid">
+        <div class="service-features-box">
+          <div class="service-box-title">Tính năng nổi bật</div>
+          <ul class="service-feature-list">
+            <li>Lộ trình học cá nhân hóa theo năng lực</li>
+            <li>Gói 4 / 8 / 12 buổi mỗi tháng linh hoạt</li>
+            <li>Báo cáo tiến độ học tập hàng tuần</li>
+            <li>Ưu tiên đặt lịch khung giờ vàng</li>
+            <li>Tiết kiệm hơn 20% so với đặt lẻ từng buổi</li>
+            <li>Hỗ trợ ôn thi học kỳ và THPT Quốc gia</li>
+          </ul>
+        </div>
+        <div class="service-pricing-box">
+          <div class="service-box-title">Các gói dịch vụ</div>
+          <table class="service-pricing-table">
+            <thead>
+              <tr>
+                <th>Gói</th>
+                <th>Số buổi</th>
+                <th>Giá</th>
+                <th>Tiết kiệm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gói cơ bản</td>
+                <td>4 buổi/tháng</td>
+                <td><span class="service-price-tag">Từ 300.000đ</span></td>
+                <td><span class="service-save-tag">10%</span></td>
+              </tr>
+              <tr>
+                <td>Gói tiêu chuẩn</td>
+                <td>8 buổi/tháng</td>
+                <td><span class="service-price-tag">Từ 550.000đ</span></td>
+                <td><span class="service-save-tag">15%</span></td>
+              </tr>
+              <tr>
+                <td>Gói nâng cao</td>
+                <td>12 buổi/tháng</td>
+                <td><span class="service-price-tag">Từ 750.000đ</span></td>
+                <td><span class="service-save-tag">20%</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="service-suited-box">
+        <div class="service-box-title" style="font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#2e7d32; margin-bottom:0;">Phù hợp cho</div>
+        <ul class="service-suited-list">
+          <li>🎓 Học sinh ôn thi học kỳ hoặc THPT Quốc gia</li>
+          <li>📖 Sinh viên học lại môn cơ sở / chuyên ngành</li>
+          <li>🌐 Người luyện IELTS/TOEIC theo lộ trình bài bản</li>
+        </ul>
+      </div>
+
+      <a href="#" class="service-cta-btn">Đăng ký gói học</a>
+    </div>
+  </div>
+
+  <!-- COMPARISON TABLE -->
+  <div class="service-compare-wrap">
+    <div class="service-compare-inner">
+      <h2 class="service-section-title">Chọn hình thức <span class="accent">phù hợp với bạn</span></h2>
+      <div class="service-divider"></div>
+      <table class="service-compare-table">
+        <thead>
+          <tr>
+            <th>Tiêu chí</th>
+            <th>📝 Giải bài tập</th>
+            <th>🎥 Học 1-1</th>
+            <th>📅 Kèm theo tháng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thời gian</td>
+            <td>30–60 phút</td>
+            <td>45–90 phút/buổi</td>
+            <td>Cả tháng</td>
+          </tr>
+          <tr>
+            <td>Phù hợp</td>
+            <td>Cần giải gấp</td>
+            <td>Cần hiểu sâu</td>
+            <td class="highlight">Học dài hạn</td>
+          </tr>
+          <tr>
+            <td>Tương tác</td>
+            <td>Không trực tiếp</td>
+            <td>Trực tiếp 1-1</td>
+            <td class="highlight">Trực tiếp 1-1</td>
+          </tr>
+          <tr>
+            <td>Chi phí</td>
+            <td>Thấp nhất</td>
+            <td>Trung bình</td>
+            <td class="highlight">Tiết kiệm nhất</td>
+          </tr>
+          <tr>
+            <td>Lộ trình</td>
+            <td>Không có</td>
+            <td>Theo buổi</td>
+            <td class="highlight">Có lộ trình rõ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="service-final-cta">
+    <div class="service-final-cta-inner">
+      <h2>Vẫn chưa biết chọn gói nào?</h2>
+      <p>Liên hệ với chúng tôi qua Zalo hoặc Form bên dưới — chúng tôi sẽ tư vấn miễn phí gói dịch vụ phù hợp nhất với bạn.</p>
+      <div class="service-cta-group">
+        <a href="#" class="service-cta-btn-white">Nhắn Zalo ngay</a>
+        <a href="#" class="service-cta-btn-outline">Gửi yêu cầu tư vấn</a>
+      </div>
+    </div>
+  </div>
+
+</div>
