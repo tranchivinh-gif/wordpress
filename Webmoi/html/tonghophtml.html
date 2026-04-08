@@ -1223,1149 +1223,469 @@ function switchTab(btn, panelId) {
 
 <link rel="stylesheet" href="../css/style.css">
 
-<!-- <style>/* ===================== TOKENS ===================== */
-:root {
-  --gs-green-darkest: #071a09;
-  --gs-green-dark:    #0d2b12;
-  --gs-green-deeper:  #1b5e20;
-  --gs-green-mid:     #2e7d32;
-  --gs-green-main:    #4caf50;
-  --gs-green-light:   #81c784;
-  --gs-green-pale:    #c8e6c9;
-  --gs-green-bg:      #e8f5e9;
-  --gs-green-bg-soft: #f1f8f1;
-  --gs-green-accent:  #a5d6a7;
-  --gs-text-heading:  #1a2332;
-  --gs-text-body:     #3a4a5c;
-  --gs-white:         #ffffff;
-  --gs-border:        #e2ede3;
-  --gs-font-body:     'Be Vietnam Pro', sans-serif;
-  --gs-font-display:  'Playfair Display', serif;
-  --gs-grad-green:    linear-gradient(135deg, #2e7d32, #4caf50);
-  --gs-grad-hero:     linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
-  --gs-radius-pill:   50px;
-  --gs-radius-md:     12px;
-  --gs-radius-lg:     18px;
-}
+<!-- chinh sach bao mat  -->
 
-/* ===================== BASE ===================== */
-.gb-hero, .gb-subjects-bar, .gb-section,
-.gb-cta-band { font-family: var(--gs-font-body); }
+<div class="privacy-policy">
 
-.gb-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
+  <!-- HEADER -->
+  <div class="pp-header">
+    <h1>Chính sách bảo mật</h1>
+    <p>Cập nhật lần cuối: 01/04/2026</p>
+  </div>
 
-/* ===================== HERO ===================== */
-.gb-hero {
-  background: var(--gs-grad-hero);
-  position: relative;
-  overflow: hidden;
-  padding: 88px 0 96px;
-}
+  <!-- INTRO -->
+  <div class="pp-card">
+    Chúng tôi — nền tảng Gia Sư Online Nhóm 4 — cam kết bảo vệ thông tin cá nhân của người dùng. 
+    Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn.
+  </div>
 
-.gb-hero-bg { position: absolute; inset: 0; pointer-events: none; }
+  <!-- SECTION 1 -->
+  <div class="pp-section">
+    <h2>1. Thông tin thu thập</h2>
 
-.gb-orb {
-  position: absolute;
-  border-radius: 50%;
-}
-.gb-orb-1 {
-  width: 640px; height: 640px;
-  background: radial-gradient(circle, rgba(76,175,80,.15) 0%, transparent 70%);
-  top: -200px; right: -140px;
-}
-.gb-orb-2 {
-  width: 380px; height: 380px;
-  background: radial-gradient(circle, rgba(46,125,50,.2) 0%, transparent 70%);
-  bottom: -100px; left: 3%;
-}
-.gb-orb-3 {
-  width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(76,175,80,.12) 0%, transparent 70%);
-  top: 40%; left: 42%;
-}
-.gb-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(76,175,80,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(76,175,80,.06) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
+    <div class="pp-grid">
 
-.gb-hero-inner {
-  position: relative; z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
-}
+      <div class="pp-card">
+        <strong>Thông tin đăng ký</strong>
+        <ul class="pp-list">
+          <li>Họ tên</li>
+          <li>Email</li>
+          <li>Mật khẩu (mã hóa)</li>
+          <li>SĐT (nếu có)</li>
+        </ul>
+      </div>
 
-/* --- Eyebrow --- */
-.gb-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(76,175,80,.15);
-  border: 1px solid rgba(76,175,80,.3);
-  color: var(--gs-green-accent);
-  font-size: 11px; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: var(--gs-radius-pill);
-  margin-bottom: 22px;
-}
-.gb-eyebrow::before {
-  content: '';
-  width: 6px; height: 6px;
-  background: var(--gs-green-main);
-  border-radius: 50%;
-  animation: gbPulse 1.8s ease infinite;
-}
-@keyframes gbPulse {
-  0%,100% { transform: scale(1); opacity: 1; }
-  50%      { transform: scale(1.6); opacity: .5; }
-}
+      <div class="pp-card">
+        <strong>Khi mua hàng</strong>
+        <ul class="pp-list">
+          <li>Thông tin người mua</li>
+          <li>Email xác nhận</li>
+          <li>Lịch sử giao dịch</li>
+          <li>Nội dung bài tập</li>
+        </ul>
+      </div>
 
-.gb-hero-title {
-  font-family: var(--gs-font-display) !important;
-  font-size: clamp(32px, 4.2vw, 54px) !important;
-  font-weight: 700 !important;
-  color: #fff !important;
-  line-height: 1.18 !important;
-  letter-spacing: -0.6px !important;
-  margin: 0 0 20px !important;
-}
-.gb-hero-title em {
-  font-style: normal;
-  background: linear-gradient(90deg, var(--gs-green-main), var(--gs-green-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+    </div>
 
-.gb-hero-desc {
-  font-size: 15px !important;
-  color: rgba(255,255,255,.72) !important;
-  line-height: 1.82 !important;
-  margin: 0 0 28px !important;
-  max-width: 460px;
-}
-.gb-hero-desc strong { color: rgba(255,255,255,.92); }
+    <div class="pp-card">
+      <strong>Tự động thu thập</strong>
+      <ul class="pp-list">
+        <li>IP, trình duyệt</li>
+        <li>Thiết bị</li>
+        <li>Trang truy cập</li>
+        <li>Thời gian truy cập</li>
+      </ul>
+    </div>
 
-/* trust row */
-.gb-hero-trust {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 32px;
-}
-.gb-trust-item {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 13px;
-  font-weight: 600;
-  color: rgba(255,255,255,.75);
-}
-.gb-trust-icon { font-size: 16px; }
+  </div>
 
-/* cta row */
-.gb-hero-ctas {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
+  <!-- SECTION 2 -->
+  <div class="pp-section">
+    <h2>2. Mục đích sử dụng</h2>
 
-/* ===================== BUTTONS ===================== */
-.gb-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--gs-grad-green);
-  color: #fff !important;
-  font-family: var(--gs-font-body) !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  padding: 13px 28px;
-  border-radius: var(--gs-radius-pill);
-  text-decoration: none !important;
-  box-shadow: 0 6px 24px rgba(46,125,50,.35);
-  transition: transform .2s, box-shadow .2s;
-}
-.gb-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(46,125,50,.5);
-  color: #fff !important;
-  text-decoration: none !important;
-}
-.gb-arrow { transition: transform .2s; display: inline-block; }
-.gb-btn-primary:hover .gb-arrow { transform: translateX(4px); }
+    <div class="pp-card">
+      <table class="pp-table">
+        <tr>
+          <th>Mục đích</th>
+          <th>Chi tiết</th>
+        </tr>
+        <tr><td>Xử lý đơn</td><td>Xác nhận và hoàn thành dịch vụ</td></tr>
+        <tr><td>Thông báo</td><td>Email & trạng thái đơn</td></tr>
+        <tr><td>Hỗ trợ</td><td>Giải đáp & khiếu nại</td></tr>
+        <tr><td>Cải thiện</td><td>Phân tích hành vi</td></tr>
+        <tr><td>Marketing</td><td>Gửi ưu đãi (nếu đồng ý)</td></tr>
+      </table>
+    </div>
+  </div>
 
-.gb-btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,.1);
-  border: 1.5px solid rgba(255,255,255,.22);
-  color: rgba(255,255,255,.85) !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  padding: 12px 24px;
-  border-radius: var(--gs-radius-pill);
-  text-decoration: none !important;
-  backdrop-filter: blur(6px);
-  transition: background .2s, border-color .2s, transform .2s;
-}
-.gb-btn-ghost:hover {
-  background: rgba(255,255,255,.18);
-  border-color: rgba(255,255,255,.4);
-  transform: translateY(-2px);
-  color: #fff !important;
-}
+  <!-- SECTION 3 -->
+  <div class="pp-section">
+    <h2>3. Chia sẻ thông tin</h2>
 
-.gb-btn-ghost-white {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255,255,255,.12);
-  border: 1.5px solid rgba(255,255,255,.3);
-  color: rgba(255,255,255,.9) !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  padding: 14px 28px;
-  border-radius: var(--gs-radius-pill);
-  text-decoration: none !important;
-  backdrop-filter: blur(8px);
-  transition: background .2s, transform .2s;
-}
-.gb-btn-ghost-white:hover {
-  background: rgba(255,255,255,.2);
-  transform: translateY(-2px);
-  color: #fff !important;
-}
+    <div class="pp-card">
+      Không bán hoặc cho thuê thông tin cá nhân. Chỉ chia sẻ khi:
+      <ul class="pp-list">
+        <li>Gia sư xử lý bài (không lộ thông tin cá nhân)</li>
+        <li>Cổng thanh toán (MoMo, ngân hàng)</li>
+        <li>Yêu cầu pháp lý</li>
+      </ul>
+    </div>
+  </div>
 
-/* ===================== UPLOAD MOCK ===================== */
-.gb-mock-card {
-  background: var(--gs-white);
-  border-radius: 20px;
-  box-shadow: 0 28px 72px rgba(0,0,0,.22);
-  overflow: hidden;
-  position: relative;
-}
-.gb-mock-header {
-  background: #f5f5f5;
-  padding: 12px 18px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  border-bottom: 1px solid #eee;
-}
-.gb-mock-dot {
-  width: 10px; height: 10px;
-  border-radius: 50%;
-}
-.gb-dot-r { background: #ff5f57; }
-.gb-dot-y { background: #febc2e; }
-.gb-dot-g { background: #28c840; }
-.gb-mock-title {
-  font-size: 12px;
-  font-weight: 600;
-  color: #999;
-  margin-left: 8px;
-}
-.gb-mock-body { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+  <!-- SECTION 4 -->
+  <div class="pp-section">
+    <h2>4. Bảo mật</h2>
 
-.gb-mock-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--gs-text-body);
-  margin-bottom: 5px;
-}
-.gb-mock-select {
-  background: var(--gs-green-bg-soft);
-  border: 1.5px solid var(--gs-border);
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--gs-text-heading);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.gb-mock-caret { color: var(--gs-green-main); }
+    <div class="pp-card">
+      <ul class="pp-list">
+        <li>Mã hóa mật khẩu (bcrypt)</li>
+        <li>HTTPS (SSL)</li>
+        <li>Sao lưu dữ liệu</li>
+        <li>Hạn chế quyền truy cập</li>
+      </ul>
+    </div>
+  </div>
 
-.gb-mock-upload {
-  border: 2px dashed var(--gs-green-pale);
-  border-radius: 10px;
-  padding: 22px;
-  text-align: center;
-  background: var(--gs-green-bg-soft);
-}
-.gb-upload-icon { font-size: 28px; margin-bottom: 6px; }
-.gb-upload-txt {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--gs-text-heading);
-  margin-bottom: 3px;
-}
-.gb-upload-sub { font-size: 12px; color: var(--gs-text-body); }
+  <!-- SECTION 5 -->
+  <div class="pp-section">
+    <h2>5. Quyền người dùng</h2>
 
-.gb-mock-textarea {
-  background: var(--gs-green-bg-soft);
-  border: 1.5px solid var(--gs-border);
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 13px;
-  color: var(--gs-text-body);
-  min-height: 60px;
-  line-height: 1.6;
-}
-.gb-cursor-blink::after {
-  content: '|';
-  color: var(--gs-green-main);
-  animation: gbBlink .9s step-end infinite;
-}
-@keyframes gbBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+    <div class="pp-card">
+      <table class="pp-table">
+        <tr>
+          <th>Quyền</th>
+          <th>Cách thực hiện</th>
+        </tr>
+        <tr><td>Xem</td><td>My Account</td></tr>
+        <tr><td>Sửa</td><td>Chỉnh hồ sơ</td></tr>
+        <tr><td>Xóa</td><td>Form liên hệ</td></tr>
+        <tr><td>Hủy email</td><td>Link unsubscribe</td></tr>
+        <tr><td>Xuất dữ liệu</td><td>Email hỗ trợ</td></tr>
+      </table>
+    </div>
+  </div>
 
-.gb-mock-priority {
-  display: flex;
-  gap: 8px;
-}
-.gb-priority-opt {
-  flex: 1;
-  padding: 9px 12px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  border: 1.5px solid var(--gs-border);
-  color: var(--gs-text-body);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  cursor: pointer;
-}
-.gb-pri-active {
-  background: var(--gs-green-bg);
-  border-color: var(--gs-green-main);
-  color: var(--gs-green-mid);
-}
+  <!-- SECTION 6 -->
+  <div class="pp-section">
+    <h2>6. Cookie</h2>
 
-.gb-mock-submit {
-  background: var(--gs-grad-green);
-  color: #fff;
-  font-size: 13.5px;
-  font-weight: 700;
-  padding: 13px;
-  border-radius: var(--gs-radius-pill);
-  text-align: center;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(46,125,50,.32);
-}
+    <div class="pp-card">
+      Website dùng cookie để:
+      <ul class="pp-list">
+        <li>Giữ đăng nhập</li>
+        <li>Lưu giỏ hàng</li>
+        <li>Phân tích (Google Analytics)</li>
+      </ul>
+    </div>
+  </div>
 
-/* float cards */
-.gb-hero-mock { position: relative; }
-.gb-float-card {
-  position: absolute;
-  background: rgba(255,255,255,.95);
-  border: 1px solid rgba(255,255,255,.7);
-  backdrop-filter: blur(10px);
-  border-radius: var(--gs-radius-md);
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 8px 28px rgba(0,0,0,.12);
-}
-.gb-float-success {
-  bottom: 40px; left: -30px;
-  animation: gbFloatAnim 3s ease-in-out infinite;
-}
-.gb-float-rating {
-  top: 30px; right: -24px;
-  animation: gbFloatAnim 3s 1.5s ease-in-out infinite;
-}
-@keyframes gbFloatAnim {
-  0%,100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
-}
-.gb-float-icon { font-size: 20px; }
-.gb-float-title {
-  font-size: 12px; font-weight: 700;
-  color: var(--gs-text-heading); white-space: nowrap;
-}
-.gb-float-sub { font-size: 11px; color: var(--gs-text-body); }
+  <!-- SECTION 7 -->
+  <div class="pp-section">
+    <h2>7. Thay đổi chính sách</h2>
 
-/* ===================== SUBJECTS BAR ===================== */
-.gb-subjects-bar {
-  background: var(--gs-green-dark);
-  padding: 16px 0;
-  border-top: 1px solid rgba(76,175,80,.2);
-}
-.gb-subjects-inner {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.gb-subjects-lbl {
-  font-size: 12px; font-weight: 700;
-  color: rgba(255,255,255,.55);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.gb-subjects-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.gb-subject-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
-  color: rgba(255,255,255,.78) !important;
-  font-size: 12.5px;
-  font-weight: 600;
-  padding: 5px 14px;
-  border-radius: var(--gs-radius-pill);
-  text-decoration: none !important;
-  transition: background .2s, border-color .2s;
-}
-.gb-subject-pill:hover {
-  background: rgba(76,175,80,.22);
-  border-color: rgba(76,175,80,.45);
-  color: #fff !important;
-}
-.gb-pill-more {
-  background: rgba(76,175,80,.15);
-  border-color: rgba(76,175,80,.35);
-  color: var(--gs-green-accent) !important;
-}
+    <div class="pp-card">
+      Chính sách có thể được cập nhật và sẽ thông báo qua email hoặc website.
+    </div>
+  </div>
 
-/* ===================== SECTION COMMON ===================== */
-.gb-section { padding: 88px 0; }
-.gb-section-alt { background: var(--gs-green-bg-soft); }
+  <!-- SECTION 8 -->
+  <div class="pp-section">
+    <h2>8. Liên hệ</h2>
 
-.gb-section-head {
-  text-align: center;
-  margin-bottom: 56px;
-}
-.gb-section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--gs-green-mid);
-  font-size: 12px; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase;
-  margin-bottom: 14px;
-}
-.gb-section-label::before,
-.gb-section-label::after {
-  content: '';
-  width: 28px; height: 1.5px;
-  background: var(--gs-green-main);
-}
-.gb-section-title {
-  font-family: var(--gs-font-display) !important;
-  font-size: clamp(26px, 3.2vw, 38px) !important;
-  font-weight: 700 !important;
-  color: var(--gs-text-heading) !important;
-  line-height: 1.25 !important;
-  margin: 0 0 14px !important;
-}
-.gb-section-title em {
-  font-style: normal;
-  color: var(--gs-green-mid);
-}
-.gb-section-desc {
-  font-size: 15px;
-  color: var(--gs-text-body);
-  max-width: 540px;
-  margin: 0 auto;
-  line-height: 1.75;
-}
+    <div class="pp-card">
+      <p>Email: hotro@hoangvu.site</p>
+      <p>Zalo: 0xxx xxx xxx</p>
+      <p>Website: hoangvu.site/lien-he</p>
+    </div>
+  </div>
 
-/* ===================== HOW IT WORKS ===================== */
-.gb-how-grid {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  justify-content: center;
-  flex-wrap: nowrap;
-  margin-bottom: 36px;
-}
-.gb-how-card {
-  flex: 1;
-  max-width: 300px;
-  background: var(--gs-white);
-  border: 1.5px solid var(--gs-border);
-  border-radius: var(--gs-radius-lg);
-  padding: 32px 28px;
-  text-align: center;
-  transition: box-shadow .25s, transform .25s;
-  position: relative;
-}
-.gb-how-card:hover {
-  box-shadow: 0 14px 44px rgba(46,125,50,.12);
-  transform: translateY(-5px);
-}
-.gb-how-card-hl {
-  border-color: var(--gs-green-main);
-  background: linear-gradient(145deg, #f8fdf8, #fff);
-  box-shadow: 0 8px 32px rgba(46,125,50,.1);
-}
-.gb-how-num {
-  position: absolute;
-  top: -16px; left: 50%;
-  transform: translateX(-50%);
-  background: var(--gs-grad-green);
-  color: #fff;
-  font-family: var(--gs-font-display);
-  font-size: 14px; font-weight: 700;
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 16px rgba(46,125,50,.3);
-  letter-spacing: 0;
-}
-.gb-how-num-hl { background: var(--gs-green-mid); }
-.gb-how-icon { font-size: 36px; margin: 10px 0 14px; }
-.gb-how-title {
-  font-size: 16px !important;
-  font-weight: 700 !important;
-  color: var(--gs-text-heading) !important;
-  margin: 0 0 10px !important;
-}
-.gb-how-desc {
-  font-size: 13.5px !important;
-  color: var(--gs-text-body) !important;
-  line-height: 1.72 !important;
-  margin: 0 0 16px !important;
-}
-.gb-how-time {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--gs-green-bg);
-  color: var(--gs-green-mid);
-  font-size: 12px; font-weight: 700;
-  padding: 5px 14px;
-  border-radius: var(--gs-radius-pill);
-}
-.gb-time-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--gs-green-main);
-  animation: gbPulse 1.8s ease infinite;
-}
-.gb-how-arrow {
-  font-size: 28px;
-  color: var(--gs-green-pale);
-  padding: 0 12px;
-  flex-shrink: 0;
-  font-weight: 300;
-}
+</div>
 
-/* how bonus */
-.gb-how-bonus {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--gs-green-bg);
-  border: 1.5px solid var(--gs-green-pale);
-  border-radius: var(--gs-radius-md);
-  padding: 18px 24px;
-  flex-wrap: wrap;
-}
-.gb-bonus-icon { font-size: 26px; flex-shrink: 0; }
-.gb-how-bonus div {
-  flex: 1;
-  font-size: 14px;
-  color: var(--gs-text-body);
-  line-height: 1.65;
-}
-.gb-how-bonus strong { color: var(--gs-text-heading); }
-.gb-bonus-link {
-  font-size: 13.5px; font-weight: 700;
-  color: var(--gs-green-mid) !important;
-  white-space: nowrap;
-  text-decoration: none !important;
-  padding: 8px 18px;
-  border: 2px solid var(--gs-green-main);
-  border-radius: var(--gs-radius-pill);
-  transition: background .2s;
-  flex-shrink: 0;
-}
-.gb-bonus-link:hover {
-  background: var(--gs-green-main);
-  color: #fff !important;
-}
+<!-- điều khoản sử dụng  -->
 
-/* ===================== FEATURES GRID ===================== */
-.gb-features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.gb-feature-card {
-  background: var(--gs-white);
-  border: 1.5px solid var(--gs-border);
-  border-radius: var(--gs-radius-lg);
-  padding: 30px 26px;
-  transition: box-shadow .25s, transform .25s, border-color .25s;
-  position: relative;
-  overflow: hidden;
-}
-.gb-feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--gs-grad-green);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .3s ease;
-}
-.gb-feature-card:hover {
-  box-shadow: 0 14px 44px rgba(46,125,50,.12);
-  transform: translateY(-4px);
-  border-color: var(--gs-green-pale);
-}
-.gb-feature-card:hover::before { transform: scaleX(1); }
-.gb-fc-big { grid-column: span 1; }
-.gb-fc-icon-wrap {
-  font-size: 36px;
-  margin-bottom: 14px;
-  display: block;
-}
-.gb-fc-title {
-  font-size: 17px !important;
-  font-weight: 700 !important;
-  color: var(--gs-text-heading) !important;
-  margin: 0 0 10px !important;
-}
-.gb-fc-desc {
-  font-size: 14px !important;
-  color: var(--gs-text-body) !important;
-  line-height: 1.75 !important;
-  margin: 0 0 16px !important;
-}
-.gb-fc-stat {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding-top: 14px;
-  border-top: 1px solid var(--gs-border);
-  margin-top: auto;
-}
-.gb-fc-stat-num {
-  font-family: var(--gs-font-display);
-  font-size: 32px; font-weight: 700;
-  color: var(--gs-green-mid);
-  line-height: 1;
-}
-.gb-fc-stat-lbl {
-  font-size: 12px; color: var(--gs-text-body);
-}
+<div class="terms-policy">
 
-/* ===================== PRICING ===================== */
-.gb-price-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  align-items: start;
-  margin-bottom: 24px;
-}
-.gb-price-card {
-  background: var(--gs-white);
-  border: 1.5px solid var(--gs-border);
-  border-radius: 20px;
-  padding: 36px 28px;
-  position: relative;
-  transition: box-shadow .25s, transform .25s;
-}
-.gb-price-card:hover {
-  box-shadow: 0 18px 52px rgba(46,125,50,.13);
-  transform: translateY(-4px);
-}
-.gb-pc-featured {
-  background: var(--gs-green-dark);
-  border-color: var(--gs-green-main);
-  transform: scale(1.04);
-}
-.gb-pc-featured:hover {
-  transform: scale(1.04) translateY(-4px);
-}
-.gb-pc-week {
-  border-color: #f59e0b;
-  background: linear-gradient(145deg, #fffdf5, #fff);
-}
+  <!-- HEADER -->
+  <div class="tp-header">
+    <h1>Điều khoản sử dụng</h1>
+    <p>Cập nhật lần cuối: 01/04/2026</p>
+    <p>Minh bạch – công bằng – bảo vệ hệ thống</p>
+  </div>
 
-.gb-pc-badge {
-  position: absolute; top: -14px; left: 50%;
-  transform: translateX(-50%);
-  background: var(--gs-grad-green);
-  color: #fff;
-  font-size: 11px; font-weight: 800;
-  padding: 5px 16px;
-  border-radius: var(--gs-radius-pill);
-  white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(46,125,50,.3);
-}
-.gb-badge-gold { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
+  <!-- INTRO -->
+  <div class="tp-card">
+    Khi sử dụng hoangvu.site, bạn đồng ý với các điều khoản dưới đây.
+  </div>
 
-.gb-pc-icon { font-size: 36px; margin-bottom: 12px; display: block; }
-.gb-pc-name {
-  font-size: 12px; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase;
-  color: var(--gs-green-main);
-  margin-bottom: 12px;
-}
-.gb-pc-price-wrap {
-  display: flex;
-  align-items: baseline;
-  gap: 6px;
-  margin-bottom: 4px;
-}
-.gb-pc-price {
-  font-family: var(--gs-font-display);
-  font-size: 36px; font-weight: 700;
-  color: var(--gs-text-heading);
-  line-height: 1;
-}
-.gb-price-white { color: #fff; }
-.gb-pc-dash { font-size: 20px; color: var(--gs-text-body); }
-.gb-pc-per {
-  font-size: 12px; font-weight: 600;
-  color: var(--gs-green-main);
-  margin-bottom: 10px;
-}
-.gb-per-light { color: var(--gs-green-accent); }
-.gb-pc-desc {
-  font-size: 13px !important;
-  color: var(--gs-text-body) !important;
-  line-height: 1.6 !important;
-  margin: 0 0 20px !important;
-}
-.gb-desc-light { color: rgba(255,255,255,.65) !important; }
-.gb-pc-divider {
-  height: 1px; background: var(--gs-border);
-  margin-bottom: 20px;
-}
-.gb-divider-light { background: rgba(255,255,255,.15); }
+  <!-- SECTION 1 -->
+  <div class="tp-section">
+    <h2>1. Tài khoản</h2>
 
-.gb-pc-list {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 0 26px !important;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-.gb-pc-list li {
-  font-size: 13.5px !important;
-  color: var(--gs-text-body) !important;
-  display: flex; align-items: flex-start; gap: 10px;
-  line-height: 1.5 !important;
-}
-.gb-list-light li { color: rgba(255,255,255,.82) !important; }
-.gb-feat-yes::before {
-  content: '✓'; color: var(--gs-green-main);
-  font-weight: 700; font-size: 14px; flex-shrink: 0; line-height: 1.4;
-}
-.gb-feat-no::before {
-  content: '✗'; color: #ccc;
-  font-size: 14px; flex-shrink: 0; line-height: 1.4;
-}
+    <div class="tp-grid">
+      <div class="tp-card">
+        <strong>Đăng ký</strong>
+        <ul class="tp-list">
+          <li>Thông tin chính xác</li>
+          <li>Mỗi người 1 tài khoản</li>
+          <li>Đủ 15 tuổi hoặc có phụ huynh</li>
+          <li>Email hợp lệ</li>
+        </ul>
+      </div>
 
-.gb-pc-btn {
-  display: block; width: 100%; text-align: center;
-  padding: 12px;
-  border-radius: var(--gs-radius-pill);
-  font-family: var(--gs-font-body); font-size: 14px; font-weight: 700;
-  border: 2px solid var(--gs-green-main);
-  color: var(--gs-green-mid) !important;
-  text-decoration: none !important;
-  background: transparent;
-  transition: background .2s;
-}
-.gb-pc-btn:hover {
-  background: var(--gs-green-bg);
-  color: var(--gs-green-mid) !important;
-}
-.gb-pc-btn-light {
-  background: var(--gs-grad-green);
-  color: #fff !important;
-  border-color: transparent;
-  box-shadow: 0 6px 20px rgba(46,125,50,.35);
-}
-.gb-pc-btn-light:hover {
-  box-shadow: 0 12px 32px rgba(46,125,50,.5);
-  background: var(--gs-grad-green);
-  color: #fff !important;
-}
-.gb-pc-btn-green {
-  background: var(--gs-green-bg);
-  border-color: var(--gs-green-main);
-  color: var(--gs-green-mid) !important;
-}
-.gb-pc-btn-green:hover {
-  background: var(--gs-green-pale);
-}
+      <div class="tp-card">
+        <strong>Bảo mật</strong>
+        <ul class="tp-list">
+          <li>Tự bảo mật mật khẩu</li>
+          <li>Không chia sẻ tài khoản</li>
+          <li>Báo ngay khi bị hack</li>
+          <li>Không chịu trách nhiệm nếu lộ do bạn</li>
+        </ul>
+      </div>
+    </div>
 
-.gb-price-note {
-  text-align: center;
-  font-size: 13.5px; color: var(--gs-text-body);
-  background: var(--gs-green-bg-soft);
-  border: 1.5px solid var(--gs-border);
-  border-radius: var(--gs-radius-md);
-  padding: 16px 24px;
-  max-width: 680px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
-.gb-price-note strong { color: var(--gs-green-mid); }
+    <div class="tp-card">
+      <strong>Khóa tài khoản khi:</strong>
+      <ul class="tp-warning tp-list">
+        <li>Thông tin sai</li>
+        <li>Vi phạm điều khoản</li>
+        <li>Gian lận</li>
+      </ul>
+    </div>
+  </div>
 
-/* ===================== SUBJECTS ===================== */
-.gb-subj-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-}
-.gb-subj-card {
-  background: var(--gs-white);
-  border: 1.5px solid var(--gs-border);
-  border-radius: var(--gs-radius-lg);
-  padding: 22px 16px;
-  text-align: center;
-  text-decoration: none !important;
-  transition: box-shadow .2s, transform .2s, border-color .2s;
-}
-.gb-subj-card:hover {
-  box-shadow: 0 10px 32px rgba(46,125,50,.12);
-  transform: translateY(-4px);
-  border-color: var(--gs-green-main);
-}
-.gb-subj-featured {
-  grid-column: span 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.gb-subj-icon { font-size: 32px; margin-bottom: 8px; display: block; }
-.gb-subj-name {
-  font-size: 14px; font-weight: 700;
-  color: var(--gs-text-heading);
-  margin-bottom: 4px;
-}
-.gb-subj-count {
-  font-size: 12px; font-weight: 600;
-  color: var(--gs-green-main);
-  margin-bottom: 10px;
-}
-.gb-subj-tags {
-  display: flex; flex-wrap: wrap;
-  gap: 5px; justify-content: center;
-}
-.gb-subj-tags span {
-  background: var(--gs-green-bg);
-  color: var(--gs-green-mid);
-  font-size: 11px; font-weight: 600;
-  padding: 3px 10px;
-  border-radius: var(--gs-radius-pill);
-}
+  <!-- SECTION 2 -->
+  <div class="tp-section">
+    <h2>2. Mua hàng</h2>
 
-/* ===================== SAMPLE CARDS ===================== */
-.gb-samples-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.gb-sample-card {
-  background: var(--gs-white);
-  border: 1.5px solid var(--gs-border);
-  border-radius: var(--gs-radius-lg);
-  overflow: hidden;
-  transition: box-shadow .25s, transform .25s;
-}
-.gb-sample-card:hover {
-  box-shadow: 0 14px 44px rgba(46,125,50,.12);
-  transform: translateY(-4px);
-}
-.gb-sample-header {
-  background: var(--gs-green-bg-soft);
-  padding: 14px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--gs-border);
-}
-.gb-sample-subject {
-  display: flex; align-items: center; gap: 7px;
-  font-size: 13px; font-weight: 700;
-  color: var(--gs-text-heading);
-}
-.gb-sample-icon { font-size: 17px; }
-.gb-sample-time {
-  font-size: 11.5px; color: var(--gs-green-mid); font-weight: 600;
-}
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Xác nhận sau thanh toán</li>
+        <li>Email trong 15 phút</li>
+        <li>Kiểm tra kỹ trước khi mua</li>
+      </ul>
+    </div>
 
-.gb-sample-question, .gb-sample-solution {
-  padding: 16px 18px;
-  border-bottom: 1px solid var(--gs-border);
-}
-.gb-sq-label, .gb-ss-label {
-  font-size: 10px; font-weight: 800;
-  letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--gs-green-mid);
-  margin-bottom: 7px;
-}
-.gb-sq-text {
-  font-size: 13.5px !important;
-  color: var(--gs-text-heading) !important;
-  font-weight: 600 !important;
-  line-height: 1.6 !important;
-  margin: 0 !important;
-}
+    <div class="tp-card">
+      <strong>Thanh toán</strong>
+      <ul class="tp-list">
+        <li>Ngân hàng, MoMo</li>
+        <li>Không phí ẩn</li>
+      </ul>
+    </div>
 
-.gb-ss-step {
-  display: flex; align-items: flex-start; gap: 8px;
-  font-size: 13px; color: var(--gs-text-body);
-  line-height: 1.6; margin-bottom: 7px;
-}
-.gb-ss-num {
-  background: var(--gs-green-bg);
-  color: var(--gs-green-mid);
-  font-size: 11px; font-weight: 800;
-  width: 20px; height: 20px;
-  border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
-  flex-shrink: 0; margin-top: 1px;
-}
-.gb-ss-step em { font-style: normal; color: var(--gs-green-mid); font-weight: 600; }
-.gb-ss-formula {
-  background: var(--gs-green-dark);
-  color: var(--gs-green-accent);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 13px; line-height: 1.6;
-  padding: 10px 14px;
-  border-radius: 8px; margin-top: 8px;
-  border-left: 3px solid var(--gs-green-main);
-}
+    <div class="tp-card">
+      <strong>Thực hiện</strong>
+      <ul class="tp-list">
+        <li>Gửi bài sau thanh toán</li>
+        <li>Xử lý trong 30 phút</li>
+        <li>Hoàn thành 30–60 phút</li>
+      </ul>
+    </div>
 
-.gb-sample-footer {
-  padding: 14px 18px;
-  display: flex; flex-direction: column; gap: 5px;
-}
-.gb-sf-rating { font-size: 13px; color: #f59e0b; letter-spacing: 2px; }
-.gb-sf-note {
-  font-size: 12px; color: var(--gs-text-body);
-  font-style: italic; line-height: 1.55;
-}
+    <div class="tp-card">
+      <table class="tp-table">
+        <tr><th>Trường hợp</th><th>Kết quả</th></tr>
+        <tr><td>Hủy trước nhận bài</td><td class="ok">Hoàn 100%</td></tr>
+        <tr><td>Sai yêu cầu</td><td class="ok">Hoàn 100%</td></tr>
+        <tr><td>Đã nhận bài</td><td class="no">Không hoàn</td></tr>
+        <tr><td>Hủy trước 24h</td><td class="ok">Hoàn 100%</td></tr>
+        <tr><td>Hủy <24h</td><td class="no">Không hoàn</td></tr>
+      </table>
+    </div>
+  </div>
 
-/* ===================== REVIEWS ===================== */
-.gb-reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-.gb-review-card {
-  background: var(--gs-white);
-  border: 1.5px solid var(--gs-border);
-  border-radius: var(--gs-radius-lg);
-  padding: 28px;
-  transition: box-shadow .25s, transform .25s;
-}
-.gb-review-card:hover {
-  box-shadow: 0 10px 36px rgba(46,125,50,.1);
-  transform: translateY(-3px);
-}
-.gb-review-stars {
-  color: #f59e0b; font-size: 15px;
-  letter-spacing: 2px; margin-bottom: 14px;
-}
-.gb-review-text {
-  font-size: 14px !important;
-  color: var(--gs-text-body) !important;
-  line-height: 1.78 !important;
-  font-style: italic !important;
-  margin: 0 0 20px !important;
-}
-.gb-review-author {
-  display: flex; align-items: center; gap: 12px;
-}
-.gb-review-ava {
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--gs-grad-green);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px; flex-shrink: 0;
-}
-.gb-review-name {
-  font-size: 14px; font-weight: 700;
-  color: var(--gs-text-heading);
-}
-.gb-review-role { font-size: 12px; color: var(--gs-text-body); }
+  <!-- SECTION 3 -->
+  <div class="tp-section">
+    <h2>3. Quy định sử dụng</h2>
 
-/* ===================== FAQ ===================== */
-.gb-faq-list {
-  max-width: 780px; margin: 0 auto;
-  display: flex; flex-direction: column; gap: 12px;
-}
-.gb-faq-item {
-  border: 1.5px solid var(--gs-border);
-  border-radius: var(--gs-radius-md);
-  overflow: hidden;
-  transition: border-color .2s;
-}
-.gb-faq-item.open { border-color: var(--gs-green-main); }
-.gb-faq-q {
-  width: 100%; text-align: left;
-  padding: 18px 22px; background: var(--gs-white);
-  font-family: var(--gs-font-body);
-  font-size: 15px; font-weight: 700;
-  color: var(--gs-text-heading);
-  display: flex; align-items: center;
-  justify-content: space-between; gap: 12px;
-  cursor: pointer; border: none;
-  transition: background .2s;
-}
-.gb-faq-q:hover { background: var(--gs-green-bg-soft); }
-.gb-faq-icon {
-  font-size: 22px; color: var(--gs-green-main);
-  font-weight: 300; transition: transform .3s; flex-shrink: 0;
-}
-.gb-faq-item.open .gb-faq-icon { transform: rotate(45deg); }
-.gb-faq-a {
-  padding: 0 22px; max-height: 0; overflow: hidden;
-  transition: max-height .35s ease, padding .35s ease;
-  font-size: 14px; color: var(--gs-text-body); line-height: 1.8;
-}
-.gb-faq-item.open .gb-faq-a { max-height: 300px; padding: 0 22px 20px; }
+    <div class="tp-grid">
+      <div class="tp-card">
+        <strong>Người học</strong>
+        <ul class="tp-warning tp-list">
+          <li>Không gian lận thi</li>
+          <li>Không bán lại bài</li>
+          <li>Không dùng sai mục đích</li>
+          <li>Không xúc phạm gia sư</li>
+        </ul>
+      </div>
 
-/* ===================== CTA BAND ===================== */
-.gb-cta-band {
-  background: var(--gs-grad-hero);
-  padding: 96px 0;
-  position: relative; overflow: hidden;
-}
-.gb-cta-bg { position: absolute; inset: 0; pointer-events: none; }
-.gb-cta-orb { position: absolute; border-radius: 50%; }
-.gb-cta-orb1 {
-  width: 520px; height: 520px;
-  background: radial-gradient(circle, rgba(76,175,80,.18) 0%, transparent 70%);
-  top: -160px; right: -100px;
-}
-.gb-cta-orb2 {
-  width: 320px; height: 320px;
-  background: radial-gradient(circle, rgba(46,125,50,.22) 0%, transparent 70%);
-  bottom: -80px; left: 4%;
-}
-.gb-cta-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(76,175,80,.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(76,175,80,.05) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-.gb-cta-inner {
-  position: relative; z-index: 2;
-  text-align: center;
-}
-.gb-cta-icon {
-  font-size: 52px; margin-bottom: 16px; display: block;
-  animation: gbFloatAnim 3s ease-in-out infinite;
-}
-.gb-cta-title {
-  font-family: var(--gs-font-display) !important;
-  font-size: clamp(28px, 3.8vw, 46px) !important;
-  font-weight: 700 !important;
-  color: #fff !important;
-  margin: 0 0 18px !important;
-  line-height: 1.22 !important;
-}
-.gb-cta-title em {
-  font-style: normal;
-  background: linear-gradient(90deg, var(--gs-green-main), var(--gs-green-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.gb-cta-desc {
-  font-size: 16px !important;
-  color: rgba(255,255,255,.72) !important;
-  max-width: 500px;
-  margin: 0 auto 36px !important;
-  line-height: 1.75 !important;
-}
-.gb-cta-btns {
-  display: flex; gap: 14px;
-  justify-content: center; flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-.gb-cta-trust {
-  display: flex; align-items: center;
-  justify-content: center; gap: 12px;
-  flex-wrap: wrap;
-  font-size: 13px; color: rgba(255,255,255,.6);
-  font-weight: 500;
-}
-.gb-cta-dot { color: rgba(255,255,255,.3); }
+      <div class="tp-card">
+        <strong>Gia sư</strong>
+        <ul class="tp-warning tp-list">
+          <li>Không giải sai</li>
+          <li>Không liên hệ riêng</li>
+          <li>Không lộ info</li>
+          <li>Không hủy đơn vô lý</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 1100px) {
-  .gb-subj-grid { grid-template-columns: repeat(4, 1fr); }
-  .gb-subj-featured { grid-column: span 2; }
-  .gb-features-grid { grid-template-columns: repeat(2, 1fr); }
-}
+  <!-- SECTION 4 -->
+  <div class="tp-section">
+    <h2>4. Sở hữu</h2>
 
-@media (max-width: 900px) {
-  .gb-hero-inner { grid-template-columns: 1fr; gap: 44px; }
-  .gb-hero-mock { max-width: 480px; margin: 0 auto; width: 100%; }
-  .gb-float-success, .gb-float-rating { display: none; }
-  .gb-how-grid { flex-direction: column; align-items: stretch; }
-  .gb-how-card { max-width: 100%; }
-  .gb-how-arrow { transform: rotate(90deg); text-align: center; padding: 4px 0; font-size: 22px; }
-  .gb-price-grid { grid-template-columns: 1fr; }
-  .gb-pc-featured { transform: none; }
-  .gb-pc-featured:hover { transform: translateY(-4px); }
-  .gb-samples-grid { grid-template-columns: 1fr; }
-  .gb-reviews-grid { grid-template-columns: 1fr; }
-  .gb-subj-grid { grid-template-columns: repeat(2, 1fr); }
-  .gb-subj-featured { grid-column: span 2; }
-}
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Website thuộc hoangvu.site</li>
+        <li>Lời giải chỉ cho người mua</li>
+        <li>Cấm sao chép, phân phối</li>
+      </ul>
+    </div>
+  </div>
 
-@media (max-width: 640px) {
-  .gb-container { padding: 0 20px; }
-  .gb-section { padding: 56px 0; }
-  .gb-hero { padding: 60px 0 68px; }
-  .gb-hero-ctas { flex-direction: column; align-items: flex-start; }
-  .gb-hero-trust { gap: 12px; }
-  .gb-features-grid { grid-template-columns: 1fr; }
-  .gb-subj-grid { grid-template-columns: repeat(2, 1fr); }
-  .gb-subj-featured { grid-column: span 2; }
-  .gb-cta-btns { flex-direction: column; align-items: center; }
-  .gb-subjects-inner { flex-direction: column; align-items: flex-start; }
-  .gb-price-grid { grid-template-columns: 1fr; }
-  .gb-pc-badge { font-size: 10px; padding: 4px 12px; }
-}
+  <!-- SECTION 5 -->
+  <div class="tp-section">
+    <h2>5. Trách nhiệm</h2>
 
-  
-</style> -->
+    <div class="tp-card">
+      <ul class="tp-warning tp-list">
+        <li>Không đảm bảo kết quả học</li>
+        <li>Lỗi kỹ thuật ngoài kiểm soát</li>
+        <li>Sự cố bất khả kháng</li>
+        <li>Hành vi ngoài nền tảng</li>
+      </ul>
+    </div>
+  </div>
 
+  <!-- SECTION 6 -->
+  <div class="tp-section">
+    <h2>6. Thay đổi</h2>
 
+    <div class="tp-card">
+      Điều khoản có thể thay đổi bất cứ lúc nào.
+    </div>
+  </div>
 
+  <!-- SECTION 7 -->
+  <div class="tp-section">
+    <h2>7. Luật</h2>
+
+    <div class="tp-card">
+      Áp dụng pháp luật Việt Nam.
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="tp-section">
+    <h2>8. Liên hệ</h2>
+
+    <div class="tp-card">
+      <p>Email: hotro@hoangvu.site</p>
+      <p>Zalo: 0xxx xxx xxx</p>
+      <p>Website: hoangvu.site/lien-he</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- chính sách hoàn tiền  -->
+
+<div class="terms-policy">
+
+  <!-- HEADER -->
+  <div class="tp-header">
+    <h1>Chính sách hoàn tiền</h1>
+    <p>Cập nhật lần cuối: 01/04/2026</p>
+    <p>Minh bạch – rõ ràng – bảo vệ quyền lợi người dùng</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="tp-card">
+    Chính sách này quy định các trường hợp được hoàn tiền khi sử dụng dịch vụ tại hoangvu.site.
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="tp-section">
+    <h2>1. Điều kiện hoàn tiền</h2>
+
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Chưa bắt đầu xử lý bài</li>
+        <li>Gia sư nhận sai yêu cầu</li>
+        <li>Không thể thực hiện dịch vụ</li>
+        <li>Lỗi hệ thống gây mất đơn</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="tp-section">
+    <h2>2. Trường hợp không hoàn tiền</h2>
+
+    <div class="tp-card">
+      <ul class="tp-warning tp-list">
+        <li>Đã gửi lời giải hoặc đang xử lý</li>
+        <li>Người dùng gửi sai đề bài</li>
+        <li>Yêu cầu hủy sau thời gian quy định</li>
+        <li>Vi phạm điều khoản sử dụng</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="tp-section">
+    <h2>3. Mức hoàn tiền</h2>
+
+    <div class="tp-card">
+      <table class="tp-table">
+        <tr>
+          <th>Trường hợp</th>
+          <th>Mức hoàn</th>
+        </tr>
+        <tr>
+          <td>Hủy trước khi xử lý</td>
+          <td class="ok">100%</td>
+        </tr>
+        <tr>
+          <td>Lỗi từ hệ thống</td>
+          <td class="ok">100%</td>
+        </tr>
+        <tr>
+          <td>Chậm tiến độ nghiêm trọng</td>
+          <td class="ok">50% - 100%</td>
+        </tr>
+        <tr>
+          <td>Đã hoàn thành bài</td>
+          <td class="no">0%</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="tp-section">
+    <h2>4. Thời gian xử lý hoàn tiền</h2>
+
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Xác nhận yêu cầu: trong 24h</li>
+        <li>Hoàn tiền: 1 – 3 ngày làm việc</li>
+        <li>Phụ thuộc vào ngân hàng / ví điện tử</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="tp-section">
+    <h2>5. Hình thức hoàn tiền</h2>
+
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Hoàn về phương thức thanh toán ban đầu</li>
+        <li>Hoặc hoàn vào ví tài khoản trên hệ thống</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="tp-section">
+    <h2>6. Cách yêu cầu hoàn tiền</h2>
+
+    <div class="tp-card">
+      <ul class="tp-list">
+        <li>Gửi email yêu cầu</li>
+        <li>Cung cấp mã đơn hàng</li>
+        <li>Mô tả lý do hoàn tiền</li>
+      </ul>
+    </div>
+    <div class="tp-card">
+      <p>Email: hotro@hoangvu.site</p>
+      <p>Zalo: 0xxx xxx xxx</p>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="tp-section">
+    <h2>7. Lưu ý</h2>
+
+    <div class="tp-card">
+      <ul class="tp-warning tp-list">
+        <li>Không xử lý yêu cầu thiếu thông tin</li>
+        <li>Chỉ hỗ trợ trong thời gian quy định</li>
+        <li>Quyết định cuối cùng thuộc về hệ thống</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
