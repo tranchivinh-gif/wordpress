@@ -1,0 +1,237 @@
+<!-- ================================================================
+     ABOVE BAR
+     ================================================================ -->
+<div class="gs-above-bar">
+  <div class="gs-above-inner">
+    <div class="gs-ticker">
+      <span class="gs-badge">Tin mới</span>
+      <span class="gs-ticker-text blink-text"> <span class="party-text">🎉</span>  Ưu đãi tháng 4: Giảm 30% gói kèm theo tháng cho học sinh mới — Đăng ký ngay!</span>
+    </div>
+    <div class="gs-above-right">
+      <a href="tel:19009900">📞 1900 9900</a>
+      <span class="gs-bar-div"></span>
+      <a href="#" class="blink-text">Trở thành gia sư</a>
+      <span class="gs-bar-div"></span>
+      <a href="#" class="blink-text">Hỗ trợ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================
+     HEADER
+     ================================================================ -->
+<header class="gs-header">
+  <div class="gs-header-inner">
+    <a href="/" class="gs-logo">
+      <img src="http://hoangvu.site/wp-content/uploads/2026/04/cropped-image.webp" alt="Logo Gia Sư Online" style="height:38px;width:auto;display:block;">
+      <div class="gs-logo-text">
+        <span class="gs-logo-main">Gia Sư Online</span>
+        <span class="gs-logo-sub">Học thông minh hơn</span>
+      </div>
+    </a>
+    <div class="gs-header-actions">
+      <a href="/tai-khoan" class="gs-btn-login">Đăng nhập</a>
+      <a href="/tai-khoan" class="gs-btn-register">Đăng ký miễn phí</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================================================================
+     MENU BAR
+     ================================================================ -->
+<nav class="gs-menubar" aria-label="Menu chính">
+  <div class="gs-menubar-inner">
+
+    <div class="gs-nav-item ">
+      <a href="/" class="gs-nav-link">Trang chủ</a>
+    </div>
+
+    <div class="gs-nav-item">
+      <a href="/dang-bai-tap" class="gs-nav-link">Giải bài tập</a>
+    </div>
+
+    <div class="gs-nav-item">
+      <a href="/dich-vu" class="gs-nav-link">Dịch vụ <span class="gs-chevron">▾</span></a>
+      <div class="gs-dropdown">
+        <a href="/dich-vu/#giai-bai-tap">🔍 Giải bài tập</a>
+        <a href="/dich-vu/#hoc-kem-11">👨‍🏫 Học kèm 1-1</a>
+        <a href="/dich-vu/#kem-theo-thang">📅 Kèm theo tháng</a>
+        <div class="gs-dropdown-sep"></div>
+        <a href="/dich-vu/#bang-gia">💰 Bảng giá</a>
+      </div>
+    </div>
+
+    <div class="gs-nav-item">
+      <a href="/cua-hang" class="gs-nav-link">Cửa hàng</a>
+    </div>
+
+    <div class="gs-nav-item">
+      <a href="/tin-tuc" class="gs-nav-link">Tin tức</a>
+    </div>
+
+    <div class="gs-nav-item">
+      <a href="/lien-he" class="gs-nav-link">Liên hệ</a>
+    </div>
+
+    <div class="gs-menubar-right">
+      <a href="/tim-kiem" class="gs-icon-btn" title="Tìm kiếm" aria-label="Tìm kiếm">🔍</a>
+      <a href="/gio-hang" class="gs-icon-btn" title="Giỏ hàng" aria-label="Giỏ hàng">🛒</a>
+    </div>
+
+  </div>
+</nav>
+
+<style>
+      /* ===================== RESET & ROOT ===================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Be Vietnam Pro', sans-serif; background: #fff; color: #3a4a5c; }
+    a { text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+
+    /* ===================== DESIGN TOKENS ===================== */
+    :root {
+      --gs-green-darkest:  #071a09;
+      --gs-green-dark:     #0d2b12;
+      --gs-green-deeper:   #1b5e20;
+      --gs-green-mid:      #2e7d32;
+      --gs-green-main:     #4caf50;
+      --gs-green-light:    #81c784;
+      --gs-green-pale:     #c8e6c9;
+      --gs-green-bg:       #e8f5e9;
+      --gs-green-bg-soft:  #f1f8f1;
+      --gs-green-accent:   #a5d6a7;
+      --gs-text-heading:   #1a2332;
+      --gs-text-body:      #3a4a5c;
+      --gs-white:          #ffffff;
+      --gs-border:         #e8f5e9;
+      --gs-font-body:      'Be Vietnam Pro', sans-serif;
+      --gs-font-display:   'Playfair Display', serif;
+      --gs-grad-green:     linear-gradient(135deg, #2e7d32, #4caf50);
+      --gs-grad-hero:      linear-gradient(135deg, #0d2b12 0%, #1b5e20 50%, #2e7d32 100%);
+      --gs-radius-pill:    50px;
+      --gs-radius-md:      12px;
+    }
+
+    /* ===================== ABOVE BAR ===================== */
+    .gs-above-bar {
+      background: var(--gs-green-deeper);
+      padding: 7px 0;
+      font-family: var(--gs-font-body);
+    }
+    .gs-above-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .gs-ticker { display: flex; align-items: center; gap: 10px; flex: 1; overflow: hidden; }
+    .gs-badge {
+      background: var(--gs-green-main); color: #fff;
+      font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: var(--gs-radius-pill); flex-shrink: 0;
+    }
+    .gs-ticker-text { font-size: 12.5px; color: rgba(255,255,255,.82); white-space: nowrap; }
+    .gs-above-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+    .gs-above-right a {
+      font-size: 12px; color: rgba(255,255,255,.72); font-weight: 500;
+      display: flex; align-items: center; gap: 5px; transition: color .2s;
+    }
+    .gs-above-right a:hover { color: var(--gs-green-accent); }
+    .gs-bar-div { width: 1px; height: 14px; background: rgba(255,255,255,.2); display: inline-block; }
+
+    /* ===================== HEADER ===================== */
+    .gs-header {
+      background: #fff; border-bottom: 1px solid var(--gs-border);
+      box-shadow: 0 2px 16px rgba(46,125,50,.07); font-family: var(--gs-font-body);
+    }
+    .gs-header-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 40px;
+      height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .gs-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .gs-logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .gs-logo-main { font-family: var(--gs-font-display); font-size: 18px; font-weight: 700; color: var(--gs-green-deeper); }
+    .gs-logo-sub { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gs-green-main); margin-top: 3px; }
+    .gs-header-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .gs-btn-login {
+      font-size: 13px; font-weight: 600; color: var(--gs-green-mid);
+      padding: 8px 18px; border: 1.5px solid var(--gs-green-pale);
+      border-radius: var(--gs-radius-pill); background: transparent; transition: background .2s, border-color .2s;
+    }
+    .gs-btn-login:hover { background: var(--gs-green-bg); border-color: var(--gs-green-main); color: var(--gs-green-mid); }
+    .gs-btn-register {
+      font-size: 13px; font-weight: 700; color: #fff;
+      padding: 9px 20px; background: var(--gs-grad-green);
+      border-radius: var(--gs-radius-pill); box-shadow: 0 4px 14px rgba(46,125,50,.28); transition: box-shadow .2s, transform .2s;
+    }
+    .gs-btn-register:hover { box-shadow: 0 8px 22px rgba(46,125,50,.4); transform: translateY(-1px); color: #fff; }
+
+    /* ===================== MENUBAR ===================== */
+    .gs-menubar {
+      background: #fff; border-bottom: 2px solid var(--gs-border);
+      font-family: var(--gs-font-body); position: sticky; top: 0; z-index: 1000;
+    }
+    .gs-menubar-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; gap: 4px; }
+    .gs-nav-item { position: relative; }
+    .gs-nav-link {
+      display: flex; align-items: center; gap: 4px; padding: 14px 16px;
+      font-size: 13.5px; font-weight: 600; color: var(--gs-text-heading);
+      position: relative; transition: color .2s; white-space: nowrap;
+    }
+    .gs-nav-link::after {
+      content: ''; position: absolute; bottom: 0; left: 12px; right: 12px;
+      height: 2px; background: var(--gs-green-main); border-radius: 2px 2px 0 0;
+      transform: scaleX(0); transition: transform .2s ease;
+    }
+    .gs-nav-link:hover, .gs-nav-item.gs-active .gs-nav-link { color: var(--gs-green-mid); }
+    .gs-nav-link:hover::after, .gs-nav-item.gs-active .gs-nav-link::after { transform: scaleX(1); }
+    .gs-chevron { font-size: 9px; color: var(--gs-green-main); transition: transform .2s; }
+    .gs-nav-item:hover .gs-chevron { transform: rotate(180deg); }
+    .gs-dropdown {
+      position: absolute; top: calc(100% + 1px); left: 0;
+      background: #fff; border: 1.5px solid var(--gs-border); border-top: 3px solid var(--gs-green-main);
+      border-radius: 0 0 var(--gs-radius-md) var(--gs-radius-md);
+      box-shadow: 0 10px 36px rgba(46,125,50,.13); min-width: 200px; padding: 8px 0;
+      opacity: 0; pointer-events: none; transform: translateY(6px);
+      transition: opacity .18s, transform .18s; z-index: 999;
+    }
+    .gs-nav-item:hover .gs-dropdown { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .gs-dropdown a {
+      display: flex; align-items: center; gap: 10px; padding: 10px 18px;
+      font-size: 13.5px; font-weight: 500; color: var(--gs-text-body);
+      transition: background .15s, color .15s, padding-left .15s;
+    }
+    .gs-dropdown a:hover { background: var(--gs-green-bg); color: var(--gs-green-mid); padding-left: 24px; }
+    .gs-dropdown-sep { height: 1px; background: var(--gs-border); margin: 6px 0; }
+    .gs-menubar-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+    .gs-icon-btn {
+      width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+      border-radius: 8px; color: var(--gs-green-mid); font-size: 16px;
+      transition: background .2s; position: relative;
+    }
+    .gs-icon-btn:hover { background: var(--gs-green-bg); }
+
+        @keyframes blinkColor {
+  0% { color: red; }
+  50% { color: rgb(180, 255, 19); }
+  100% { color: red; }
+}
+
+@keyframes party {
+  0%   { transform: translateY(0) rotate(0deg); color: #ff4d4d; }
+  25%  { transform: translateY(-3px) rotate(-5deg); color: #ffcc00; }
+  50%  { transform: translateY(0) rotate(5deg); color: #00ccff; }
+  75%  { transform: translateY(-3px) rotate(-3deg); color: #66ff66; }
+  100% { transform: translateY(0) rotate(0deg); color: #ff4d4d; }
+}
+
+.party-text {
+  display: inline-block;
+  animation: party 0.8s infinite;
+  font-weight: bold;
+}
+
+.blink-text {
+  animation: blinkColor 1s infinite;
+}
+</style>
