@@ -1,0 +1,620 @@
+/* =========================================== */
+/*  Trang vendor                       */
+/* =========================================== */
+
+/* Ẩn thanh breadcrumbs */
+#breadcrumbs {
+    display: none !important;
+}
+
+/* =========================================== */
+/*  thanh bên DOKAN                              */
+/* =========================================== */
+
+#dokan-secondary.dokan-store-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  font-family: var(--dk-font-body);
+}
+.sidebar-main aside.widget {
+  background: var(--dk-white);
+  border: 1.5px solid var(--dk-border);
+  border-radius: var(--dk-radius-lg);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.sidebar-main aside.widget h2.wp-block-heading {
+  font-family: var(--dk-font-body) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: var(--dk-green-mid) !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 14px !important;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--dk-border);
+}
+
+/* Search widget */
+.wp-block-search__inside-wrapper {
+  display: flex;
+  gap: 8px;
+}
+.wp-block-search__input {
+  flex: 1;
+  font-family: var(--dk-font-body);
+  font-size: 13px;
+  color: var(--dk-text-heading);
+  background: var(--dk-green-soft);
+  border: 1.5px solid var(--dk-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: border-color .2s;
+}
+.wp-block-search__input:focus {
+  outline: none;
+  border-color: var(--dk-green-main);
+}
+.wp-block-search__button {
+  font-family: var(--dk-font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--dk-grad-green);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: box-shadow .2s;
+}
+.wp-block-search__button:hover { box-shadow: 0 4px 14px rgba(46,125,50,.3); }
+.wp-block-search__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dk-green-mid);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Latest posts */
+.wp-block-latest-posts {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wp-block-latest-posts li { padding-bottom: 10px; border-bottom: 1px solid var(--dk-border); }
+.wp-block-latest-posts li:last-child { border-bottom: none; padding-bottom: 0; }
+.wp-block-latest-posts__post-title {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--dk-text-heading) !important;
+  text-decoration: none !important;
+  line-height: 1.5;
+  display: block;
+  transition: color .2s;
+}
+.wp-block-latest-posts__post-title:hover { color: var(--dk-green-mid) !important; }
+
+/* Archives / Categories */
+.wp-block-archives-list,
+.wp-block-categories-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.wp-block-archives-list li a,
+.wp-block-categories-list li a {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--dk-text-body);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  display: block;
+  transition: background .15s, color .15s, padding-left .15s;
+}
+.wp-block-archives-list li a:hover,
+.wp-block-categories-list li a:hover {
+  background: var(--dk-green-bg);
+  color: var(--dk-green-mid);
+  padding-left: 16px;
+}
+
+/* No comments */
+.no-comments { font-size: 13px; color: var(--dk-text-body); font-style: italic; }
+
+/* =========================================== */
+/*  HOVER LIFT — CSS ONLY EFFECT               */
+/*  Dùng :has() kết hợp transform              */
+/* =========================================== */
+
+/* Subtle tilt effect trên card khi hover ảnh */
+li.dokan-single-seller:hover .store-banner {
+  box-shadow: inset 0 -30px 40px rgba(13,43,18,.4);
+}
+
+/* Pulse cho featured badge */
+.featured-label {
+  animation: dkShimmer 3s ease-in-out infinite;
+}
+@keyframes dkShimmer {
+  0%, 100% { box-shadow: 0 2px 8px rgba(255,152,0,.3); }
+  50%       { box-shadow: 0 4px 18px rgba(255,152,0,.55); }
+}
+
+/* Arrow bounce on hover */
+.store-footer > a:not(.seller-avatar a):hover .dashicons-arrow-right-alt2 {
+  animation: dkArrow .4s ease forwards;
+}
+@keyframes dkArrow {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(4px); }
+  100% { transform: translateX(2px); }
+}
+
+/* Glow border khi hover card */
+li.dokan-single-seller::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--dk-radius-xl);
+  box-shadow: inset 0 0 0 0 rgba(76,175,80,0);
+  transition: box-shadow .3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+li.dokan-single-seller:hover::after {
+  box-shadow: inset 0 0 0 1.5px rgba(76,175,80,.35);
+}
+
+
+/* =========================================== */
+/*  RESPONSIVE — < 1100px                     */
+/* =========================================== */
+
+@media (max-width: 1100px) {
+  ul.dokan-seller-wrap { grid-template-columns: repeat(2, 1fr) !important; }
+  #dokan-secondary.dokan-store-sidebar { width: 240px; }
+}
+
+
+/* =========================================== */
+/*  RESPONSIVE — < 900px TABLET               */
+/* =========================================== */
+
+@media (max-width: 900px) {
+  ul.dokan-seller-wrap { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+
+  /* Store đơn: bỏ sidebar sang dưới */
+  .dokan-store-wrap.layout-right {
+    flex-direction: column;
+  }
+  #dokan-secondary.dokan-store-sidebar { width: 100%; }
+  .sidebar-main { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  .profile-info-summery { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .profile-img.profile-img-circle { width: 72px; height: 72px; }
+
+  .dokan-store-products-ordeby { gap: 8px; }
+  .product-name-search { min-width: 120px; }
+
+  #dokan-store-listing-filter-wrap { flex-direction: column; align-items: flex-start; }
+  #dokan-store-listing-filter-wrap .right { width: 100%; justify-content: space-between; }
+}
+
+
+/* =========================================== */
+/*  RESPONSIVE — < 640px MOBILE               */
+/* =========================================== */
+
+@media (max-width: 640px) {
+  ul.dokan-seller-wrap {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    max-width: 480px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .store-banner { height: 110px; }
+
+  .store-content { padding: 12px 16px 4px; }
+  .store-footer { padding: 12px 16px 14px; }
+  .store-data h2 { font-size: 14px !important; }
+
+  /* Profile đơn */
+  .profile-info-summery-wrapper { padding: 0 16px 18px; margin-top: -36px; }
+  .profile-img.profile-img-circle { width: 64px; height: 64px; border-width: 3px; }
+  .store-name { font-size: 18px !important; }
+  .dokan-store-info { gap: 8px 16px; }
+  .profile-info-img { height: 160px; }
+  .profile-info-box::before { height: 160px; }
+
+  /* Filter */
+  #dokan-store-listing-filter-wrap { padding: 12px 14px; gap: 10px; }
+  #dokan-store-listing-filter-wrap .right { gap: 8px; }
+  .sort-by { width: 100%; }
+  .sort-by select { flex: 1; }
+  .toggle-view { margin-left: auto; }
+
+  /* Filter form */
+  #dokan-store-listing-filter-form-wrap { padding: 14px 16px; gap: 10px; }
+  .apply-filter { width: 100%; }
+  #cancel-filter-btn, #apply-filter-btn { flex: 1; text-align: center; }
+
+  /* Store filter */
+  .dokan-store-products-filter-area { padding: 12px 14px; }
+  .dokan-store-products-ordeby { flex-direction: column; align-items: stretch; }
+  .product-name-search { width: 100%; min-width: unset; }
+  .search-store-products { width: 100%; }
+  .dokan-store-products-filter-area .orderby-search { width: 100%; }
+
+  /* Sidebar */
+  .sidebar-main { grid-template-columns: 1fr; }
+
+  /* Tabs */
+  .dokan-store-tabs { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+  .dokan-store-tabs ul li a { padding: 9px 12px; font-size: 12.5px; white-space: nowrap; }
+
+  /* Pagination */
+  .dokan-pagination { gap: 4px; }
+  .dokan-pagination li a,
+  .dokan-pagination li span { min-width: 34px; height: 34px; font-size: 12px; }
+}
+
+
+/* =========================================== */
+/*  RESPONSIVE — < 420px SMALL                */
+/* =========================================== */
+
+@media (max-width: 420px) {
+  .store-banner { height: 90px; }
+  .store-footer { flex-direction: row; align-items: center; }
+  .seller-avatar { width: 44px; height: 44px; }
+  .store-footer > a:not(.seller-avatar a) { width: 36px; height: 36px; }
+  .featured-label { font-size: 9px; padding: 2px 8px; }
+
+  .profile-info-img { height: 130px; }
+  .profile-info-box::before { height: 130px; }
+  .store-name { font-size: 16px !important; }
+  .dokan-store-info li { font-size: 12px !important; }
+}
+
+/* nút tròn (icon arrow) */
+.store-footer .dokan-btn-round {
+    background: var(--gs-green-main) !important;
+    color: var(--gs-white) !important;
+    border: none;
+    transition: 0.3s;
+}
+
+/* hover */
+.store-footer .dokan-btn-round:hover {
+    background: var(--gs-green-deeper) !important;
+    transform: translateY(-2px);
+}
+
+/* icon bên trong */
+.store-footer .dokan-btn-round:before,
+.store-footer .dokan-btn-round {
+    color: var(--gs-white) !important;
+}
+
+/* override đúng class của Dokan */
+.store-content .featured-favourite .featured-label {
+    background: linear-gradient(135deg, #fff8e1, #ffecb3) !important;
+    color: var(--gs-green-deeper) !important;
+    border: 1px solid #ffe082 !important;
+
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;	
+}
+
+.store-content .featured-favourite .featured-label {
+    position: relative;
+    top: -6px; /* chỉnh số này để lên/xuống */
+}
+
+
+.store-content .featured-favourite .featured-label {
+    background: linear-gradient(135deg, #fff8e1, #ffecb3) !important;
+    color: var(--gs-green-deeper) !important;
+    border: 1px solid #ffe082 !important;
+
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+
+    position: relative;
+    top: -6px;
+
+    animation: badgeBlinkStrong 1.6s ease-in-out infinite;
+}
+
+/* animation mạnh hơn */
+@keyframes badgeBlinkStrong {
+    0%, 100% {
+        background: linear-gradient(135deg, #fff8e1, #ffecb3);
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255,193,7,0);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #ffe082, #ffd54f);
+        transform: scale(1.12);
+        box-shadow: 0 4px 12px rgba(255,193,7,0.5);
+    }
+}
+
+/* ===== ROOT (nếu chưa có) ===== */
+:root {
+  --gs-card-bg: linear-gradient(135deg, #c8e6c9, #e8f5e9);
+}
+
+/* ===== FILTER TRÊN ===== */
+#dokan-store-listing-filter-wrap {
+    background: var(--gs-card-bg);
+    padding: 14px 18px;
+    border-radius: var(--gs-radius-md);
+
+    box-shadow: 0 8px 20px rgba(46,125,50,0.15);
+    border: 1px solid rgba(0,0,0,0.05);
+
+    margin-bottom: 20px;
+}
+
+/* ===== FILTER DƯỚI ===== */
+#dokan-store-listing-filter-form-wrap {
+    background: var(--gs-card-bg);
+    padding: 14px 16px;
+    border-radius: var(--gs-radius-md);
+
+    box-shadow: 0 8px 20px rgba(46,125,50,0.15);
+    border: 1px solid rgba(0,0,0,0.05);
+
+    margin-bottom: 20px;
+}
+
+/* ===== CARD FOOTER ===== */
+.store-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 14px;
+
+    background: var(--gs-card-bg);
+
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-radius: 0 0 var(--gs-radius-lg) var(--gs-radius-lg);
+
+    box-shadow: 0 8px 20px rgba(46,125,50,0.15);
+}
+
+/* ===== AVATAR ===== */
+.seller-avatar img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* ===== BUTTON ===== */
+.store-footer .dokan-btn-round {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: var(--gs-green-main) !important;
+    color: #fff !important;
+
+    box-shadow: 0 4px 10px rgba(76,175,80,0.35);
+    transition: 0.25s ease;
+}
+
+.store-footer .dokan-btn-round:hover {
+    background: var(--gs-green-deeper) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(76,175,80,0.45);
+}
+
+/* ===== ICON ===== */
+.store-footer .dokan-btn-round:before {
+    color: #fff !important;
+}
+
+.store-content {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* ===== LIST POSTS ===== */ .sidebar-main .wp-block-latest-posts li { background: #fff; padding: 10px 12px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #e0f2e9; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.25s; } /* hover nhẹ */ .sidebar-main .wp-block-latest-posts li:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(46,125,50,0.12); border-color: #a5d6a7; } .sidebar-main .wp-block-latest-posts li { border-left: 4px solid var(--gs-green-main); }
+
+/* ===== WIDGET CHA ===== */
+.sidebar-main .widget {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8f1);
+    padding: 14px;
+    border-radius: var(--gs-radius-md);
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(76,175,80,0.15);
+    box-shadow: 0 6px 16px rgba(46,125,50,0.10);
+}
+
+/* ===== TITLE ===== */
+.sidebar-main .wp-block-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gs-green-deeper);
+
+    margin-bottom: 12px;
+
+    position: relative;
+    padding-left: 10px;
+}
+
+/* line nhỏ dưới title */
+.sidebar-main .wp-block-heading::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: -4px;
+    width: 30px;
+    height: 3px;
+    background: var(--gs-green-main);
+    border-radius: 2px;
+}
+
+/* ===== TITLE POSTS (nâng cấp thêm) ===== */
+.sidebar-main .wp-block-latest-posts__post-title {
+    display: block;
+    font-size: 13.5px;
+    line-height: 1.4;
+
+    color: var(--gs-green-deeper);
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+/* hover title */
+.sidebar-main .wp-block-latest-posts__post-title:hover {
+    color: var(--gs-green-main);
+}
+
+/* ===== SEARCH ===== */
+.wp-block-search__inside-wrapper {
+    display: flex;
+    gap: 6px;
+}
+
+.wp-block-search__input {
+    flex: 1;
+}
+
+.wp-block-search__button {
+    background: var(--gs-green-main);
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.wp-block-search__button:hover {
+    background: var(--gs-green-deeper);
+}
+
+/* ===== LIST KHÁC (archives, categories) ===== */
+.sidebar-main .wp-block-categories li,
+.sidebar-main .wp-block-archives li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #c8e6c9;
+}
+
+.sidebar-main .wp-block-categories li:last-child,
+.sidebar-main .wp-block-archives li:last-child {
+    border-bottom: none;
+}
+
+/* hover nhẹ */
+.sidebar-main .wp-block-categories a:hover,
+.sidebar-main .wp-block-archives a:hover {
+    color: var(--gs-green-main);
+    padding-left: 4px;
+}
+
+/* ===== WRAPPER ===== */
+.wp-block-search__inside-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    background: #fff;
+    padding: 6px;
+    border-radius: 12px;
+
+    border: 1px solid #c8e6c9;
+    box-shadow: 0 4px 10px rgba(46,125,50,0.08);
+}
+
+/* ===== INPUT ===== */
+.wp-block-search__input {
+    flex: 1;
+    border: none;
+    outline: none;
+
+    padding: 8px 10px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    color: var(--gs-text-heading);
+}
+
+/* focus */
+.wp-block-search__input:focus {
+    background: #f1f8f1;
+}
+
+/* ===== BUTTON ===== */
+.wp-block-search__button {
+    background: linear-gradient(135deg, #2e7d32, #4caf50);
+    color: #fff;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.25s;
+
+    box-shadow: 0 4px 10px rgba(76,175,80,0.3);
+}
+
+/* hover */
+.wp-block-search__button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(76,175,80,0.4);
+}
+
+/* active */
+.wp-block-search__button:active {
+    transform: scale(0.96);
+}
+/* xoá border thừa */
+.wp-block-search__input,
+.wp-block-search__button {
+    border: none !important;
+    outline: none;
+}
+
+/* giữ 1 border duy nhất ở wrapper */
+.wp-block-search__inside-wrapper {
+    border: 1px solid #c8e6c9;
+}
+
+.wp-block-search__inside-wrapper:focus-within {
+    border-color: var(--gs-green-main);
+    box-shadow: 0 0 0 3px rgba(76,175,80,0.2);
+}
